@@ -6,7 +6,7 @@
 
 <p><strong>Yes! I’m currently looking for a co-op/internship.</strong><br>
 Earliest start date: <strong>May 2026</strong><br>
-Preferred term length: <strong>8 months or longer</strong></p>
+Preferred term length: <strong>4 months or 8 months</strong></p>
 
 <p>I love taking on new challenges. If you'd like to connect or feel I’d be a great fit for your team, you can reach me here:</p>
 
