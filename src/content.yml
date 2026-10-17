@@ -144,10 +144,10 @@ projects:
     subtitle: Anti-theft caging-port protection for trailer air brakes
     category: design
     year: 2025–26
-    org: Capstone · sponsored by Level 5 Fleet
+    org: Capstone Team 12, BrakeIn Security · sponsored by Level5Fleet
     tags: [SolidWorks, Rapid prototyping, FEA, Tolerance analysis, Mechatronics]
     featured: true
-    cover: "https://framerusercontent.com/images/mCSGF1ziyOSGzCZbyDzGpDrRw.jpg"
+    cover: img/sbc-workbench.jpg
     summary: >
       A motorized locking device that keeps thieves from releasing a trailer's parking brakes
       through the caging port, while staying quick to remove for authorized maintenance.
@@ -175,19 +175,24 @@ projects:
           manufacturability, and strength of critical components.
       - heading: Testing
         body: >
-          3D-printed prototypes with motors and actuators were mounted on a brake-chamber mock-up
-          and cycled through repeated lock/unlock tests. The device locked and unlocked reliably,
+          Early 3D-printed prototypes with motors and actuators were mounted on a brake-chamber
+          mock-up and cycled through repeated lock/unlock tests, then the design moved to full
+          prototype chambers powered from a 12 V supply. The device locked and unlocked reliably,
           fully covered the port, and met 100% of its functional tests, with minor alignment
           refinements identified.
+      - heading: Showcase
+        body: >
+          The team presented the final design and working prototype at the UBC capstone showcase.
       - heading: Next steps
         list:
           - Metal prototype in hardened steel
           - Standardized 10-minute tamper tests
           - Integrate with supply-line protection and venting control
     images:
-      - { src: "https://framerusercontent.com/images/mCSGF1ziyOSGzCZbyDzGpDrRw.jpg", caption: "" }
-      - { src: "https://framerusercontent.com/images/QO3MulgWknqqqNtQAX4FXwryh8.jpg", caption: "" }
-      - { src: "https://framerusercontent.com/images/zss9L1Gzhdouut4Q8mtEAjd9S9Y.png", caption: "" }
+      - { src: img/sbc-showcase.jpg, caption: "Team 12 (BrakeIn Security) with the final prototype and poster at the UBC capstone showcase." }
+      - { src: img/sbc-workbench.jpg, caption: "Assembling and bench-powering the prototype brake chambers from a 12 V supply." }
+      - { src: img/sbc-lock-test.mp4, poster: img/sbc-lock-test-poster.jpg, caption: "Bench test of the electric lock on its mounting plate." }
+      - { src: img/sbc-port-lock.mp4, poster: img/sbc-port-lock-poster.jpg, caption: "The caging-port lock actuating inside the assembled chamber." }
 
   - slug: piv
     title: Particle Image Velocimetry over an Airfoil

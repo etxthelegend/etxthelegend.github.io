@@ -122,6 +122,8 @@ p+p{margin-top:12px}
 .gallery img.contain{aspect-ratio:auto;object-fit:contain;background:#fff;padding:12px}
 .gallery .wide{grid-column:1/-1}
 .gallery .wide img{max-height:720px}
+.gallery figure:not(.lead):not(.wide):last-child:nth-child(even){grid-column:1/-1}
+.gallery figure:not(.lead):not(.wide):last-child:nth-child(even) img{aspect-ratio:16/8}
 .gallery .lead{grid-column:1/-1}
 .gallery .lead img,.gallery .lead video{aspect-ratio:auto;height:auto;object-fit:contain;background:var(--bg2)}
 .gallery.n1{grid-template-columns:1fr}
