@@ -260,6 +260,7 @@ projects:
       - { src: img/sbc-workbench.jpg, caption: "Assembling and bench-powering the prototype brake chambers from a 12 V supply." }
       - { src: img/sbc-lock-test.mp4, poster: img/sbc-lock-test-poster.jpg, caption: "Bench test of the electric lock on its mounting plate." }
       - { src: img/sbc-port-lock.mp4, poster: img/sbc-port-lock-poster.jpg, caption: "The caging-port lock actuating inside the assembled chamber." }
+      - { src: img/sbc-cad-exploded.jpg, fit: contain, caption: "Exploded SolidWorks model of the final locking-plug assembly." }
 
   - slug: piv
     title: Particle Image Velocimetry over an Airfoil
