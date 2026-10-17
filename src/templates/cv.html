@@ -34,7 +34,7 @@
 <section class="wrap block">
   <div class="block-head"><h2>Skills</h2></div>
   {% for s in skills %}
-  <div class="cv-item"><div class="cv-when">{{ s.group }}</div><div><p>{{ s.items }}</p></div></div>
+  <div class="cv-item"><div class="cv-when">{{ s.group }}</div><div><p>{{ s['items'] }}</p></div></div>
   {% endfor %}
 </section>
 {% endblock %}
