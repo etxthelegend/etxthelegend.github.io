@@ -18,7 +18,7 @@
     {% for im in p.images %}
     <figure class="{% if loop.first %}lead{% elif im.fit == 'contain' %}wide{% endif %}">
       {% if im.src.endswith('.mp4') %}
-      <video src="{{ root }}{{ im.src }}" autoplay muted loop playsinline preload="metadata"{% if im.poster %} poster="{{ root }}{{ im.poster }}"{% endif %}></video>
+      <video src="{{ root }}{{ im.src }}" autoplay muted loop playsinline preload="metadata"{% if im.fit == 'contain' %} class="contain"{% endif %}{% if im.poster %} poster="{{ root }}{{ im.poster }}"{% endif %}></video>
       {% else %}
       {% set u = im.src if im.src.startswith('http') else root ~ im.src %}
       <a href="{{ u }}" target="_blank" rel="noopener"><img src="{{ u }}" alt="{{ im.caption }}" loading="lazy"{% if im.fit == 'contain' %} class="contain"{% endif %}></a>

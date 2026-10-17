@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thermophoretic Sampler · Ethan Xiong</title>
+<meta name="description" content="Testing the UBC thermophoretic sampler against a known aerosol and an OpenFOAM model, as the first step toward a package that collects several TEM samples during one UAV flight.
+">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232747c9'/><text x='16' y='22' font-family='Georgia' font-size='17' text-anchor='middle' fill='white'>EX</text></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="../index.html">Ethan Xiong<span class="dot">.</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+    <label for="nav-toggle" class="nav-btn"><span></span><span></span></label>
+    <nav class="nav">
+      
+      <a href="../index.html">Home</a>
+      
+      <a href="../research.html">Research</a>
+      
+      <a href="../projects.html" class="on" aria-current="page">Projects</a>
+      
+      <a href="../publications.html">Publications</a>
+      
+      <a class="nav-cv" href="../cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap page-head">
+  <div class="crumbs"><a href="../projects.html">Projects</a> / Thermophoretic Sampler</div>
+  <h1 class="display">Thermophoretic Sampler</h1>
+  <p class="lede">Experimental and computational validation of a TEM grid sampler</p>
+  <dl class="facts">
+    <div><dt>Year</dt><dd>2026–27</dd></div>
+    <div><dt>Context</dt><dd>MECH 493 thesis project · UBC Energy &amp; Aerosol Laboratory</dd></div>
+    <div><dt>Tools</dt><dd>OpenFOAM · CFD · SMPS · Spark-discharge aerosol · TEM · Arduino</dd></div>
+  </dl>
+  
+</section>
+
+
+<section class="wrap">
+  <div class="gallery n4">
+    
+    <figure class="lead">
+      
+      
+      <a href="../img/tps-cfd-flow-rate.jpg" target="_blank" rel="noopener"><img src="../img/tps-cfd-flow-rate.jpg" alt="OpenFOAM velocity and temperature fields for the heated jet hitting the grid at 0.1 and 0.5 L/min." loading="lazy" class="contain"></a>
+      
+      <figcaption>OpenFOAM velocity and temperature fields for the heated jet hitting the grid at 0.1 and 0.5 L/min.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/tps-setup.jpg" target="_blank" rel="noopener"><img src="../img/tps-setup.jpg" alt="Test setup: spark-discharge generator, SMPS, and the sampler with its control box." loading="lazy"></a>
+      
+      <figcaption>Test setup: spark-discharge generator, SMPS, and the sampler with its control box.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/tps-smps.jpg" target="_blank" rel="noopener"><img src="../img/tps-smps.jpg" alt="SMPS size distribution of the generated aerosol, used as the reference." loading="lazy"></a>
+      
+      <figcaption>SMPS size distribution of the generated aerosol, used as the reference.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/tps-tem-1.jpg" target="_blank" rel="noopener"><img src="../img/tps-tem-1.jpg" alt="TEM image of spark-generated aggregates collected by the sampler on a lacey carbon grid." loading="lazy"></a>
+      
+      <figcaption>TEM image of spark-generated aggregates collected by the sampler on a lacey carbon grid.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/tps-tem-2.jpg" target="_blank" rel="noopener"><img src="../img/tps-tem-2.jpg" alt="Another region of the same grid." loading="lazy"></a>
+      
+      <figcaption>Another region of the same grid.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/tps-controller.jpg" target="_blank" rel="noopener"><img src="../img/tps-controller.jpg" alt="The sampler&#39;s control box on the bench supply." loading="lazy"></a>
+      
+      <figcaption>The sampler&#39;s control box on the bench supply.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/tps-controller-panel.jpg" target="_blank" rel="noopener"><img src="../img/tps-controller-panel.jpg" alt="Front panel with an OLED sampling timer and push-button controls." loading="lazy"></a>
+      
+      <figcaption>Front panel with an OLED sampling timer and push-button controls.</figcaption>
+    </figure>
+    
+    <figure class="wide">
+      
+      <video src="../img/tps-cfd-particles.mp4" autoplay muted loop playsinline preload="metadata" class="contain" poster="../img/tps-cfd-particles-poster.jpg"></video>
+      
+      <figcaption>OpenFOAM particle tracking: 50 nm soot tracers carried by the jet onto the grid (dots enlarged for visibility).</figcaption>
+    </figure>
+    
+    <figure class="wide">
+      
+      
+      <a href="../img/tps-cfd-fluent-validation.jpg" target="_blank" rel="noopener"><img src="../img/tps-cfd-fluent-validation.jpg" alt="Nozzle-exit speed and temperature profiles: OpenFOAM against the ANSYS Fluent reference." loading="lazy" class="contain"></a>
+      
+      <figcaption>Nozzle-exit speed and temperature profiles: OpenFOAM against the ANSYS Fluent reference.</figcaption>
+    </figure>
+    
+  </div>
+</section>
+
+
+<section class="wrap block">
+  <p class="summary">Testing the UBC thermophoretic sampler against a known aerosol and an OpenFOAM model, as the first step toward a package that collects several TEM samples during one UAV flight.
+</p>
+  <div class="rows">
+    
+    <div class="row">
+      <h3>Why</h3>
+      <div>
+        <p>TEM is one of the most direct ways to see the shape of soot, but the particles first have to land on a TEM grid. A thermophoretic sampler (TPS) does this with a temperature gradient: a heated jet of aerosol hits a cool grid, and small particles drift from hot gas toward the cold surface. Aircraft and drones can sample where people can&#39;t reach, but one grid exposed for a whole flight gives one blended sample. I&#39;m working toward a package that collects at least five separate samples in a single flight.
+</p>
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>Experiment</h3>
+      <div>
+        <p>A Palas GFG 1000 spark-discharge generator produces a controlled aerosol. A scanning mobility particle sizer (SMPS) measures its size distribution and concentration as the reference, and the sampler collects particles onto a TEM grid for a known flow rate and time. The grids are imaged, and the particles will be counted with CarboSAMY. In the first runs the SMPS measured about 1.1 × 10⁷ particles/cm³ with a geometric mean diameter of 24.5 nm.
+</p>
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>First results</h3>
+      <div>
+        <p>10- and 20-minute samples collected plenty of aggregates on lacey carbon grids. The deposit is not uniform across the grid, though, so counting particles on the grid alone can&#39;t give a reliable collection efficiency. The next tests will put the SMPS on the sampler&#39;s exhaust as well and compare inlet and outlet concentrations.
+</p>
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>CFD model</h3>
+      <div>
+        <p>I built an OpenFOAM model of the heated nozzle and grid region (0.70 mm tube, exit 3.67 mm above the grid) to solve the flow and temperature fields. Its nozzle-exit speed and temperature profiles match an ANSYS Fluent reference. I then track 50 nm soot particles through the jet to see where and why they deposit, and compare flow rates such as 0.1 and 0.5 L/min.
+</p>
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>Next steps</h3>
+      <div>
+        
+        <ul><li>Compare CFD deposition with the measured collection efficiency</li><li>Vary flow rate, heater temperature, and jet-to-grid spacing in both model and experiment</li><li>Design and prototype a multi-grid package for UAV sampling</li></ul>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="wrap block pager">
+  <a href="carbosamy.html"><span class="label">Previous</span>CarboSAMY</a>
+  <a href="smart-brake-chamber.html" class="r"><span class="label">Next</span>Smart Brake Chamber</a>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-name">Ethan Theodore Xiong</div>
+      <div class="muted">UBC Energy &amp; Aerosol Laboratory<br>Vancouver, BC</div>
+    </div>
+    <div>
+      <div class="label">Contact</div>
+      <a href="mailto:etxiong2@student.ubc.ca">etxiong2@student.ubc.ca</a>
+    </div>
+    <div>
+      <div class="label">Elsewhere</div>
+      <a href="https://www.linkedin.com/in/ethanxiongetx/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/etxthelegend" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="wrap foot-small muted">© 2026 Ethan Theodore Xiong</div>
+</footer>
+
+<script>
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-toggle').checked=false}));
+
+</script>
+</body>
+</html>

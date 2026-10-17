@@ -28,6 +28,7 @@ home:
 
 news:
   - { date: "2026", text: "CarboSAMY manuscript <strong>submitted</strong>." }
+  - { date: "Oct 2026", text: "First spark-discharge tests of the thermophoretic sampler with SMPS reference and TEM imaging." }
   - { date: "2026", text: "Poster on TEM image-analysis techniques at the <strong>Canadian Aerosol Conference</strong>." }
   - { date: "Jul 2026", text: "Started mentoring two students on TEM annotation for model validation." }
   - { date: "May 2026", text: "Joined the UBC Energy & Aerosol Laboratory as an undergraduate research assistant." }
@@ -58,6 +59,7 @@ research:
         of soot and other carbonaceous particles in transmission electron microscopy images,
         cutting analysis time by 99.6% compared with manual analysis. Manuscript submitted.
     - title: Thermophoretic TEM sampler redesign
+      project: thermophoretic-sampler
       text: >
         Led the redesign of a thermophoretic sampler for field aerosol collection, using Ansys
         Fluent to evaluate jet temperature gradients, nozzle velocity, and downstream thermal
@@ -138,6 +140,64 @@ projects:
       - { src: img/carbosamy-segmentation-comparison.jpg, fit: contain, caption: "Segmentation of wildfire, laboratory, and lacey-grid soot: CarboSAMY compared with Carboseg and k-means." }
       - { src: img/carbosamy-parity.jpg, fit: contain, caption: "Aggregate diameter against manual measurement: CarboSAMY tracks the 1:1 line with under 1% bias." }
       - { src: img/carbosamy-pp-comparison.jpg, fit: contain, caption: "Primary-particle detections from manual analysis, CHT, SAGE, and CarboSAMY-pp on the same images." }
+
+  - slug: thermophoretic-sampler
+    title: Thermophoretic Sampler
+    subtitle: Experimental and computational validation of a TEM grid sampler
+    category: research
+    year: 2026–27
+    org: MECH 493 thesis project · UBC Energy & Aerosol Laboratory
+    tags: [OpenFOAM, CFD, SMPS, Spark-discharge aerosol, TEM, Arduino]
+    featured: false
+    cover: img/tps-tem-1.jpg
+    summary: >
+      Testing the UBC thermophoretic sampler against a known aerosol and an OpenFOAM model, as
+      the first step toward a package that collects several TEM samples during one UAV flight.
+    sections:
+      - heading: Why
+        body: >
+          TEM is one of the most direct ways to see the shape of soot, but the particles first
+          have to land on a TEM grid. A thermophoretic sampler (TPS) does this with a temperature
+          gradient: a heated jet of aerosol hits a cool grid, and small particles drift from hot gas
+          toward the cold surface. Aircraft and drones can sample where people can't reach, but one
+          grid exposed for a whole flight gives one blended sample. I'm working toward a package
+          that collects at least five separate samples in a single flight.
+      - heading: Experiment
+        body: >
+          A Palas GFG 1000 spark-discharge generator produces a controlled aerosol. A scanning
+          mobility particle sizer (SMPS) measures its size distribution and concentration as the
+          reference, and the sampler collects particles onto a TEM grid for a known flow rate and
+          time. The grids are imaged, and the particles will be counted with CarboSAMY. In the first
+          runs the SMPS measured about 1.1 × 10⁷ particles/cm³ with a geometric mean diameter
+          of 24.5 nm.
+      - heading: First results
+        body: >
+          10- and 20-minute samples collected plenty of aggregates on lacey carbon grids. The
+          deposit is not uniform across the grid, though, so counting particles on the grid alone
+          can't give a reliable collection efficiency. The next tests will put the SMPS on the
+          sampler's exhaust as well and compare inlet and outlet concentrations.
+      - heading: CFD model
+        body: >
+          I built an OpenFOAM model of the heated nozzle and grid region (0.70 mm tube, exit
+          3.67 mm above the grid) to solve the flow and temperature fields. Its nozzle-exit speed
+          and temperature profiles match an ANSYS Fluent reference. I then track 50 nm soot
+          particles through the jet to see where and why they deposit, and compare flow rates such
+          as 0.1 and 0.5 L/min.
+      - heading: Next steps
+        list:
+          - Compare CFD deposition with the measured collection efficiency
+          - Vary flow rate, heater temperature, and jet-to-grid spacing in both model and experiment
+          - Design and prototype a multi-grid package for UAV sampling
+    images:
+      - { src: img/tps-cfd-flow-rate.jpg, fit: contain, caption: "OpenFOAM velocity and temperature fields for the heated jet hitting the grid at 0.1 and 0.5 L/min." }
+      - { src: img/tps-setup.jpg, caption: "Test setup: spark-discharge generator, SMPS, and the sampler with its control box." }
+      - { src: img/tps-smps.jpg, caption: "SMPS size distribution of the generated aerosol, used as the reference." }
+      - { src: img/tps-tem-1.jpg, caption: "TEM image of spark-generated aggregates collected by the sampler on a lacey carbon grid." }
+      - { src: img/tps-tem-2.jpg, caption: "Another region of the same grid." }
+      - { src: img/tps-controller.jpg, caption: "The sampler's control box on the bench supply." }
+      - { src: img/tps-controller-panel.jpg, caption: "Front panel with an OLED sampling timer and push-button controls." }
+      - { src: img/tps-cfd-particles.mp4, poster: img/tps-cfd-particles-poster.jpg, fit: contain, caption: "OpenFOAM particle tracking: 50 nm soot tracers carried by the jet onto the grid (dots enlarged for visibility)." }
+      - { src: img/tps-cfd-fluent-validation.jpg, fit: contain, caption: "Nozzle-exit speed and temperature profiles: OpenFOAM against the ANSYS Fluent reference." }
 
   - slug: smart-brake-chamber
     title: Smart Brake Chamber
