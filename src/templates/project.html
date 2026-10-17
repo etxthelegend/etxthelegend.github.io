@@ -21,7 +21,7 @@
       <video src="{{ root }}{{ im.src }}" autoplay muted loop playsinline preload="metadata"{% if im.fit == 'contain' %} class="contain"{% endif %}{% if im.poster %} poster="{{ root }}{{ im.poster }}"{% endif %}></video>
       {% else %}
       {% set u = im.src if im.src.startswith('http') else root ~ im.src %}
-      <a href="{{ u }}" target="_blank" rel="noopener"><img src="{{ u }}" alt="{{ im.caption }}" loading="lazy"{% if im.fit == 'contain' %} class="contain"{% endif %}></a>
+      <a href="{{ u }}" target="_blank" rel="noopener"><img src="{{ u }}" alt="{{ im.caption }}" loading="lazy"{% if im.fit == 'contain' %} class="contain"{% elif im.fit == 'plot' %} class="plot"{% endif %}></a>
       {% endif %}
       {% if im.caption %}<figcaption>{{ im.caption }}</figcaption>{% endif %}
     </figure>

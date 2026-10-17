@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mixed Turbofan Cycle Analysis · Ethan Xiong</title>
-<meta name="description" content="A station-by-station cycle model of a mixed-flow turbofan, used to study how bypass ratio, pressure ratio, and turbine inlet temperature trade thrust against fuel burn.
+<meta name="description" content="A station-by-station cycle model of the F100-PW-100 afterburning turbofan that predicts dry and afterburning thrust within about 1% of published values, then maps how cycle parameters trade thrust against fuel burn.
 ">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,35 +38,98 @@
 <section class="wrap page-head">
   <div class="crumbs"><a href="../projects.html">Projects</a> / Mixed Turbofan Cycle Analysis</div>
   <h1 class="display">Mixed Turbofan Cycle Analysis</h1>
-  <p class="lede">Zero-dimensional MATLAB engine model</p>
+  <p class="lede">Zero-dimensional MATLAB model of the F100-PW-100</p>
   <dl class="facts">
     <div><dt>Year</dt><dd>2025</dd></div>
     <div><dt>Context</dt><dd>MECH 477 · Aerospace Propulsion</dd></div>
-    <div><dt>Tools</dt><dd>MATLAB · Propulsion · Thermodynamics</dd></div>
+    <div><dt>Tools</dt><dd>MATLAB · Propulsion · Thermodynamics · Cycle analysis</dd></div>
   </dl>
   
 </section>
 
 
+<section class="wrap">
+  <div class="gallery n4">
+    
+    <figure class="lead">
+      
+      
+      <a href="../img/turbofan-stations.jpg" target="_blank" rel="noopener"><img src="../img/turbofan-stations.jpg" alt="Engine layout and the station numbering used through the cycle model." loading="lazy" class="contain"></a>
+      
+      <figcaption>Engine layout and the station numbering used through the cycle model.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/turbofan-thrust-mdot.jpg" target="_blank" rel="noopener"><img src="../img/turbofan-thrust-mdot.jpg" alt="Thrust scales almost linearly with airflow." loading="lazy" class="plot"></a>
+      
+      <figcaption>Thrust scales almost linearly with airflow.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/turbofan-thrust-pr.jpg" target="_blank" rel="noopener"><img src="../img/turbofan-thrust-pr.jpg" alt="At fixed turbine inlet temperature, a higher compressor pressure ratio lowers thrust." loading="lazy" class="plot"></a>
+      
+      <figcaption>At fixed turbine inlet temperature, a higher compressor pressure ratio lowers thrust.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/turbofan-tsfc-tit.jpg" target="_blank" rel="noopener"><img src="../img/turbofan-tsfc-tit.jpg" alt="TSFC rises with turbine inlet temperature because fuel flow grows faster than thrust." loading="lazy" class="plot"></a>
+      
+      <figcaption>TSFC rises with turbine inlet temperature because fuel flow grows faster than thrust.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/turbofan-constant-thrust.jpg" target="_blank" rel="noopener"><img src="../img/turbofan-constant-thrust.jpg" alt="Fuel flow needed to hold 54.96 kN thrust as the compressor pressure ratio rises." loading="lazy" class="plot"></a>
+      
+      <figcaption>Fuel flow needed to hold 54.96 kN thrust as the compressor pressure ratio rises.</figcaption>
+    </figure>
+    
+  </div>
+</section>
+
 
 <section class="wrap block">
-  <p class="summary">A station-by-station cycle model of a mixed-flow turbofan, used to study how bypass ratio, pressure ratio, and turbine inlet temperature trade thrust against fuel burn.
+  <p class="summary">A station-by-station cycle model of the F100-PW-100 afterburning turbofan that predicts dry and afterburning thrust within about 1% of published values, then maps how cycle parameters trade thrust against fuel burn.
 </p>
   <div class="rows">
     
     <div class="row">
       <h3>Model</h3>
       <div>
-        <p>A zero-dimensional MATLAB model applying mass, energy, and momentum balances at each engine station, from inlet through fan, compressor, combustor, turbines, mixer, and nozzle.
+        <p>I modelled the engine station by station, from intake through fan, bypass duct, compressor, combustor, turbine, mixer, afterburner, and nozzle, using energy balances, ideal-gas relations, and a temperature-dependent specific heat. Because Cp and γ depend on temperature, each station is solved iteratively until the static temperature and Mach number converge. Fuel flow comes from the combustor energy balance at a fixed turbine inlet temperature of 1680 K.
 </p>
         
       </div>
     </div>
     
     <div class="row">
+      <h3>Results</h3>
+      <div>
+        
+        <ul><li>Dry: 55.0 kN net thrust, 541 N·s/kg specific thrust, 1.42 kg/s fuel flow</li><li>Afterburning: 104.8 kN net thrust and 4.73 kg/s total fuel flow, with TSFC rising about 74%</li><li>At the published 102 kg/s airflow the model gives 55.17 kN dry (published 55.2 kN) and 105.2 kN afterburning (published 106.4 kN)</li></ul>
+      </div>
+    </div>
+    
+    <div class="row">
       <h3>Parametric studies</h3>
       <div>
-        <p>Swept bypass ratio, compressor pressure ratio, turbine inlet temperature, and component efficiencies to see their effect on thrust, specific fuel consumption, and overall propulsion performance.
+        <p>I swept airflow (75–125 kg/s), compressor pressure ratio (4–15), fan, compressor, and turbine polytropic efficiencies, and turbine inlet temperature (1200–1850 K), and found the fuel flow needed to hold thrust constant as the pressure ratio changes. Thrust scales almost linearly with airflow while specific thrust and TSFC stay nearly flat. With turbine inlet temperature fixed, raising the pressure ratio lowers fuel flow and TSFC but also lowers thrust.
+</p>
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>What I took from it</h3>
+      <div>
+        <p>Cycle parameters are tightly coupled. Changing one at a time, such as compressor efficiency below about 0.45, can push the model into non-physical results, which is why real engines co-optimize pressure ratio, turbine inlet temperature, and component efficiencies together.
 </p>
         
       </div>

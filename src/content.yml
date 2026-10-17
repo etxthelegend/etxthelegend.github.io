@@ -302,27 +302,51 @@ projects:
 
   - slug: turbofan-cycle
     title: Mixed Turbofan Cycle Analysis
-    subtitle: Zero-dimensional MATLAB engine model
+    subtitle: Zero-dimensional MATLAB model of the F100-PW-100
     category: analysis
     year: 2025
     org: MECH 477 · Aerospace Propulsion
-    tags: [MATLAB, Propulsion, Thermodynamics]
+    tags: [MATLAB, Propulsion, Thermodynamics, Cycle analysis]
     featured: false
-    cover: ""
+    cover: img/turbofan-stations.jpg
     summary: >
-      A station-by-station cycle model of a mixed-flow turbofan, used to study how bypass ratio,
-      pressure ratio, and turbine inlet temperature trade thrust against fuel burn.
+      A station-by-station cycle model of the F100-PW-100 afterburning turbofan that predicts
+      dry and afterburning thrust within about 1% of published values, then maps how cycle
+      parameters trade thrust against fuel burn.
     sections:
       - heading: Model
         body: >
-          A zero-dimensional MATLAB model applying mass, energy, and momentum balances at each
-          engine station, from inlet through fan, compressor, combustor, turbines, mixer, and nozzle.
+          I modelled the engine station by station, from intake through fan, bypass duct,
+          compressor, combustor, turbine, mixer, afterburner, and nozzle, using energy balances,
+          ideal-gas relations, and a temperature-dependent specific heat. Because Cp and γ depend
+          on temperature, each station is solved iteratively until the static temperature and Mach
+          number converge. Fuel flow comes from the combustor energy balance at a fixed turbine
+          inlet temperature of 1680 K.
+      - heading: Results
+        list:
+          - "Dry: 55.0 kN net thrust, 541 N·s/kg specific thrust, 1.42 kg/s fuel flow"
+          - "Afterburning: 104.8 kN net thrust and 4.73 kg/s total fuel flow, with TSFC rising about 74%"
+          - "At the published 102 kg/s airflow the model gives 55.17 kN dry (published 55.2 kN) and 105.2 kN afterburning (published 106.4 kN)"
       - heading: Parametric studies
         body: >
-          Swept bypass ratio, compressor pressure ratio, turbine inlet temperature, and component
-          efficiencies to see their effect on thrust, specific fuel consumption, and overall
-          propulsion performance.
-    images: []
+          I swept airflow (75–125 kg/s), compressor pressure ratio (4–15), fan, compressor, and
+          turbine polytropic efficiencies, and turbine inlet temperature (1200–1850 K), and found
+          the fuel flow needed to hold thrust constant as the pressure ratio changes. Thrust scales almost
+          linearly with airflow while specific thrust and TSFC stay nearly flat. With turbine
+          inlet temperature fixed, raising the pressure ratio lowers fuel flow and TSFC but also
+          lowers thrust.
+      - heading: What I took from it
+        body: >
+          Cycle parameters are tightly coupled. Changing one at a time, such as compressor
+          efficiency below about 0.45, can push the model into non-physical results, which is why
+          real engines co-optimize pressure ratio, turbine inlet temperature, and component
+          efficiencies together.
+    images:
+      - { src: img/turbofan-stations.jpg, fit: contain, caption: "Engine layout and the station numbering used through the cycle model." }
+      - { src: img/turbofan-thrust-mdot.jpg, fit: plot, caption: "Thrust scales almost linearly with airflow." }
+      - { src: img/turbofan-thrust-pr.jpg, fit: plot, caption: "At fixed turbine inlet temperature, a higher compressor pressure ratio lowers thrust." }
+      - { src: img/turbofan-tsfc-tit.jpg, fit: plot, caption: "TSFC rises with turbine inlet temperature because fuel flow grows faster than thrust." }
+      - { src: img/turbofan-constant-thrust.jpg, fit: plot, caption: "Fuel flow needed to hold 54.96 kN thrust as the compressor pressure ratio rises." }
 
   - slug: les-sgs-review
     title: LES Subgrid-Scale Model Review
@@ -423,39 +447,6 @@ projects:
       - { src: img/truck-tracker-detection.jpg, caption: "A detected truck with its track ID." }
       - { src: img/truck-tracker-multi.jpg, caption: "Several vehicles tracked at once." }
 
-  - slug: enord
-    title: ENORD
-    subtitle: Fully 3D-printed RC cave crawler
-    category: personal
-    year: 2024–
-    org: Personal project
-    tags: [CAD, 3D printing, Suspension design]
-    featured: false
-    cover: "https://framerusercontent.com/images/fOAmTcoDXHRsl7YfgWJYdbAEg.png"
-    summary: >
-      An RC crawler designed from scratch to handle real cave terrain, with a 4-link suspension
-      and an almost entirely 3D-printed chassis.
-    sections:
-      - heading: Targets
-        list:
-          - Traverse uneven cave terrain with high-articulation suspension
-          - About 3 hours of run time on battery
-          - At least 10 m/s on flat ground
-          - Fully 3D-printed and easy to repair
-          - Room for LEDs and a small camera
-      - heading: Design
-        body: >
-          A 4-link suspension with generous wheel travel, geometry tuned to keep wheels planted on
-          sharp terrain, and a modular chassis. Parts are PLA+ and PETG with tuned orientation,
-          infill, and wall thickness, plus metal inserts at high-load points.
-      - heading: Status
-        body: >
-          First prototype built and tested; suspension meets expectations. Next: camera and
-          lighting for cave trials, dust and moisture protection, and TPU bumpers and tires.
-    images:
-      - { src: "https://framerusercontent.com/images/fOAmTcoDXHRsl7YfgWJYdbAEg.png", caption: "" }
-      - { src: "https://framerusercontent.com/images/2LrntNq8NMXaH2IwTSXTgFrmkA.jpg", caption: "" }
-      - { src: "https://framerusercontent.com/images/pr7ST0pfN9NIxZiw01SxPqUcMI.jpg", caption: "" }
 
 # ── CV ─────────────────────────────────────────────────────────
 education:
