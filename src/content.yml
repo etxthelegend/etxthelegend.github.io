@@ -27,6 +27,7 @@ home:
   photo: ""   # e.g. img/ethan.jpg — leave blank to hide
 
 news:
+  - { date: "Nov 2026", text: "Presenting CarboSAMY at the <strong>ASME IMECE 2026</strong> Undergraduate Research and Design Expo in Vancouver." }
   - { date: "2026", text: "CarboSAMY manuscript <strong>submitted</strong>." }
   - { date: "Oct 2026", text: "First spark-discharge tests of the thermophoretic sampler with SMPS reference and TEM imaging." }
   - { date: "2026", text: "Poster on TEM image-analysis techniques at the <strong>Canadian Aerosol Conference</strong>." }
@@ -90,6 +91,11 @@ publications:
     venue: "Aerospace Science and Technology (target)"
     status: In preparation
     kind: Journal
+  - authors: "<u>Xiong, E. T.</u>, Sapkota, N., Sipkens, T. A., and Rogak, S. N."
+    title: "An automated deep-learning workflow for segmenting and characterizing carbonaceous particles in transmission electron microscopy images"
+    venue: "ASME IMECE 2026, Undergraduate Research and Design Expo (poster competition), Vancouver"
+    status: Accepted
+    kind: Conference
   - authors: "<u>Xiong, E. T.</u>, Sapkota, N., Tordiff, J., Rogak, S. N., Corbin, J. C., and Sipkens, T. A."
     title: "Image analysis techniques for transmission electron microscopy analysis of carbonaceous and related particles and their application"
     venue: "Canadian Aerosol Conference, 2026"
@@ -130,8 +136,9 @@ projects:
           data, reviewing consistency, particle identification, and mask quality.
       - heading: Status
         body: >
-          Manuscript submitted. Results were also presented as a poster at the Canadian Aerosol
-          Conference (2026).
+          Manuscript submitted. Results were presented as a poster at the Canadian Aerosol
+          Conference (2026), and a poster has been accepted for the ASME IMECE 2026 Undergraduate
+          Research and Design Expo in Vancouver.
     images:
       - { src: img/carbosamy-workflow.jpg, fit: contain, caption: "Inference workflow. YOLO finds and classifies particles, and its boxes prompt CarboSAM to produce masks at (a) the aggregate level and (b) the primary-particle level." }
       - { src: img/carbosamy-tem-soot.jpg, caption: "A soot aggregate imaged by transmission electron microscopy." }
