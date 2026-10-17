@@ -1,0 +1,415 @@
+# ───────────────────────────────────────────────────────────────
+#  content.yml — EVERYTHING on the site lives here.
+#  Edit this file, push to GitHub, and the site rebuilds itself.
+# ───────────────────────────────────────────────────────────────
+
+site:
+  name: Ethan Xiong
+  full_name: Ethan Theodore Xiong
+  tagline: Mechanical Engineering (Aerospace) · UBC
+  email: etxiong2@student.ubc.ca
+  location: Vancouver, BC
+  affiliation: UBC Energy & Aerosol Laboratory
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/ethanxiongetx/" }
+    - { label: GitHub,   url: "https://github.com/etxthelegend" }
+  cv_pdf: files/Ethan_Xiong_CV.pdf
+
+home:
+  headline: "Soot, flames, and the <em>flows</em> that carry them."
+  intro: >
+    I'm a fourth-year Mechanical Engineering student at the University of British Columbia,
+    specializing in aerospace. I work in the UBC Energy & Aerosol Laboratory with
+    Prof. Steven Rogak, where I build deep-learning tools that measure soot particles in
+    electron-microscope images. I'm heading toward graduate research in gas-turbine
+    combustion, sustainable aviation fuels, and the emissions they produce.
+  status: "Graduating May 2027 · Open to graduate research positions"
+  photo: ""   # e.g. img/ethan.jpg — leave blank to hide
+
+news:
+  - { date: "2026", text: "CarboSAMY manuscript <strong>submitted</strong>." }
+  - { date: "2026", text: "Poster on TEM image-analysis techniques at the <strong>Canadian Aerosol Conference</strong>." }
+  - { date: "Jul 2026", text: "Started mentoring two students on TEM annotation for model validation." }
+  - { date: "May 2026", text: "Joined the UBC Energy & Aerosol Laboratory as an undergraduate research assistant." }
+
+interests:
+  - title: Gas-turbine combustion & turbomachinery
+    text: >
+      How combustor design, operating conditions, and fuel properties shape efficiency,
+      operability, flame stability, heat transfer, pressure loss, and overall propulsion performance.
+  - title: Sustainable aviation fuels, soot & emissions
+    text: >
+      How conventional and alternative jet fuels change soot/nvPM formation, gaseous emissions,
+      particle morphology, and fuel-specific combustion behaviour in propulsion-relevant systems.
+  - title: Turbulent reacting flows, CFD & aerosol diagnostics
+    text: >
+      Computational and experimental study of turbulent mixing, particle-laden flows, particle
+      sampling, and deep-learning image processing for particle measurement.
+
+research:
+  lab: UBC Energy & Aerosol Laboratory
+  supervisor: Prof. Steven Rogak
+  dates: May 2026 – Aug 2026
+  items:
+    - title: Deep-learning segmentation of soot in TEM images
+      project: carbosamy
+      text: >
+        Built CarboSAMY, an automated workflow that detects, segments, and measures the morphology
+        of soot and other carbonaceous particles in transmission electron microscopy images,
+        cutting analysis time by 99.6% compared with manual analysis. Manuscript submitted.
+    - title: Thermophoretic TEM sampler redesign
+      text: >
+        Led the redesign of a thermophoretic sampler for field aerosol collection, using Ansys
+        Fluent to evaluate jet temperature gradients, nozzle velocity, and downstream thermal
+        behaviour for better particle deposition on TEM grids.
+    - title: Mobile jet-engine exhaust duct
+      text: >
+        Designed a gusseted support frame for a mobile jet-engine exhaust duct with a ~12 m
+        vertical riser, using CAD and FEA for the structure and MATLAB air-entrainment and
+        heat-transfer models to size the duct and estimate mixed-gas temperatures.
+    - title: Mentoring the TEM annotation team
+      text: >
+        Supervise two students doing manual segmentation of soot TEM images; coordinate annotation,
+        review segmentation consistency, and guide mask preparation for model-validation data.
+
+publications:
+  - authors: "<u>Xiong, E. T.</u>, Sapkota, N., Sipkens, T. A., and Rogak, S. N."
+    title: "CarboSAMY: An automated deep-learning workflow for characterizing and segmenting carbonaceous particles in transmission electron microscopy images"
+    venue: "Powder Technology"
+    status: Submitted
+    kind: Journal
+  - authors: "Sapkota, N., Mehri, R., Corbin, J. C., <u>Xiong, E. T.</u>, Rogak, S. N., and Sipkens, T. A."
+    title: "Investigating morphology of fresh and compacted soot aggregates using bidimensional effective density and transmission electron microscopy"
+    venue: "Journal of Aerosol Science (target)"
+    status: In preparation
+    kind: Journal
+  - authors: "Sharma, S., Underhill, T., <u>Xiong, E. T.</u>, Sapkota, N., Lintusaari, H., Kitchen, P., Goeing, J., and Rogak, S. N."
+    title: "Integrated screening of alternative aviation fuels: development and commissioning of a laboratory platform for engine performance and emissions characterization"
+    venue: "Aerospace Science and Technology (target)"
+    status: In preparation
+    kind: Journal
+  - authors: "<u>Xiong, E. T.</u>, Sapkota, N., Tordiff, J., Rogak, S. N., Corbin, J. C., and Sipkens, T. A."
+    title: "Image analysis techniques for transmission electron microscopy analysis of carbonaceous and related particles and their application"
+    venue: "Canadian Aerosol Conference, 2026"
+    status: Poster
+    kind: Conference
+
+# ── Projects ───────────────────────────────────────────────────
+# category: research | design | analysis | personal
+# images: list of {src, caption}. src can be a local path (img/...) or a URL.
+projects:
+  - slug: carbosamy
+    title: CarboSAMY
+    subtitle: Automated deep-learning segmentation of soot in TEM images
+    category: research
+    year: 2026
+    org: UBC Energy & Aerosol Laboratory
+    tags: [Python, Deep learning, Image processing, TEM]
+    featured: true
+    cover: ""
+    summary: >
+      A deep-learning workflow that finds, segments, and measures soot and other carbonaceous
+      particles in electron-microscope images, reducing analysis time by 99.6%.
+    sections:
+      - heading: Why
+        body: >
+          Transmission electron microscopy (TEM) is the standard way to see the structure of soot
+          aggregates, but measuring them means hand-tracing particles image by image. That slow,
+          subjective step limits how much data a study can use.
+      - heading: What I built
+        body: >
+          CarboSAMY is an end-to-end workflow that detects particles, segments them, and extracts
+          morphology metrics automatically. It uses two models: CarboSAM-seg for segmentation and
+          CarboSAM-pp for post-processing. Compared with manual analysis it cuts analysis time by
+          99.6%.
+      - heading: Validation
+        body: >
+          I coordinated a small annotation team producing manually segmented images as validation
+          data, reviewing consistency, particle identification, and mask quality.
+      - heading: Status
+        body: >
+          Manuscript submitted. Results were also presented as a poster at the Canadian Aerosol
+          Conference (2026).
+    images: []
+
+  - slug: smart-brake-chamber
+    title: Smart Brake Chamber
+    subtitle: Anti-theft caging-port protection for trailer air brakes
+    category: design
+    year: 2025–26
+    org: Capstone · sponsored by Level 5 Fleet
+    tags: [SolidWorks, Rapid prototyping, FEA, Tolerance analysis, Mechatronics]
+    featured: true
+    cover: "https://framerusercontent.com/images/mCSGF1ziyOSGzCZbyDzGpDrRw.jpg"
+    summary: >
+      A motorized locking device that keeps thieves from releasing a trailer's parking brakes
+      through the caging port, while staying quick to remove for authorized maintenance.
+    sections:
+      - heading: Problem
+        body: >
+          Trailer theft costs the trucking industry millions every year. A common method defeats
+          the air-brake system by pressurizing the spring brake chamber or reaching the caging port
+          to mechanically release the parking brakes. Our system targets three attack paths:
+          pressurizing the supply line, uncontrolled venting, and access to the caging port.
+          My work focused on the caging port.
+      - heading: Requirements
+        list:
+          - Block direct access to the caging port in normal operation
+          - Survive at least 10 minutes of angle grinding and drilling
+          - Unlock and come off quickly for authorized service
+          - Fit existing brake chambers without modifying their internals
+          - Stay cheap enough for fleet-wide deployment
+      - heading: Design
+        body: >
+          I produced 10+ SolidWorks iterations and settled on a two-part interlocking housing that
+          blocks any straight-line path to the port, with a servo-driven automatic lock for early
+          functional testing. I built complete drawing sets, including exploded assemblies and
+          detail drawings for every custom part, and ran tolerance stack-ups and FEA to check fit,
+          manufacturability, and strength of critical components.
+      - heading: Testing
+        body: >
+          3D-printed prototypes with motors and actuators were mounted on a brake-chamber mock-up
+          and cycled through repeated lock/unlock tests. The device locked and unlocked reliably,
+          fully covered the port, and met 100% of its functional tests, with minor alignment
+          refinements identified.
+      - heading: Next steps
+        list:
+          - Metal prototype in hardened steel
+          - Standardized 10-minute tamper tests
+          - Integrate with supply-line protection and venting control
+    images:
+      - { src: "https://framerusercontent.com/images/mCSGF1ziyOSGzCZbyDzGpDrRw.jpg", caption: "" }
+      - { src: "https://framerusercontent.com/images/QO3MulgWknqqqNtQAX4FXwryh8.jpg", caption: "" }
+      - { src: "https://framerusercontent.com/images/zss9L1Gzhdouut4Q8mtEAjd9S9Y.png", caption: "" }
+
+  - slug: piv
+    title: Particle Image Velocimetry over an Airfoil
+    subtitle: Measuring flow separation and circulation on a NACA 0012
+    category: analysis
+    year: 2025
+    org: UBC Mechanical Engineering
+    tags: [PIV, Experimental fluids, Aerodynamics]
+    featured: true
+    cover: "https://framerusercontent.com/images/TUUhlSXftG9a8mjzvsinC1qG0.png"
+    summary: >
+      PIV in a recirculating water channel to map the flow around a NACA 0012 from ~1° to ~38°
+      angle of attack, and estimate lift from circulation.
+    sections:
+      - heading: Motivation
+        body: >
+          How flow behaves around an airfoil decides lift, stall, and wake development. PIV lets us
+          see separation and vortex formation directly and also put numbers on them: integrating
+          vorticity gives circulation, a proxy for lift.
+      - heading: Goals
+        list:
+          - Measure velocity fields at angles of attack from about 1.3° to 37.7°
+          - Compute vorticity and circulation as a lift proxy
+          - Compare laminar and jet inflow conditions
+          - Observe separation and wake growth as angle of attack increases
+      - heading: Setup
+        body: >
+          A 48-inch acrylic recirculating water trough, seeded with coffee grounds and lit from
+          below by a lightboard. Perforated screens and an inverted-V baffle conditioned the inflow,
+          and a Nikon D750 recorded particle motion for each test condition.
+      - heading: Results
+        list:
+          - Captured attached, transitional, and fully separated flow
+          - Wake grew with angle of attack, as expected
+          - Circulation increased with angle of attack, consistent with aerodynamic theory
+      - heading: Error sources
+        body: >
+          Non-uniform inflow from the trough design, seed particles avoiding the free surface,
+          ripples and optical distortion, large seed particles limiting resolution, and blockage
+          near the airfoil.
+    images:
+      - { src: "https://framerusercontent.com/images/TUUhlSXftG9a8mjzvsinC1qG0.png", caption: "" }
+      - { src: "https://framerusercontent.com/images/QMJNuFBhCEaLTJkuGlTx01qNDU.png", caption: "" }
+      - { src: "https://framerusercontent.com/images/qnAsX3ECOH3sLoxx7LVNDeT54Y.png", caption: "" }
+      - { src: "https://framerusercontent.com/images/ejEYGzm3dLKsiXykrsluRrQPc.png", caption: "" }
+      - { src: "https://framerusercontent.com/images/2I78bHqdvsDwiD9imjcbc8A2NS0.png", caption: "" }
+
+  - slug: turbofan-cycle
+    title: Mixed Turbofan Cycle Analysis
+    subtitle: Zero-dimensional MATLAB engine model
+    category: analysis
+    year: 2025
+    org: MECH 477 · Aerospace Propulsion
+    tags: [MATLAB, Propulsion, Thermodynamics]
+    featured: false
+    cover: ""
+    summary: >
+      A station-by-station cycle model of a mixed-flow turbofan, used to study how bypass ratio,
+      pressure ratio, and turbine inlet temperature trade thrust against fuel burn.
+    sections:
+      - heading: Model
+        body: >
+          A zero-dimensional MATLAB model applying mass, energy, and momentum balances at each
+          engine station, from inlet through fan, compressor, combustor, turbines, mixer, and nozzle.
+      - heading: Parametric studies
+        body: >
+          Swept bypass ratio, compressor pressure ratio, turbine inlet temperature, and component
+          efficiencies to see their effect on thrust, specific fuel consumption, and overall
+          propulsion performance.
+    images: []
+
+  - slug: les-sgs-review
+    title: LES Subgrid-Scale Model Review
+    subtitle: Eddy-viscosity closures for wall-bounded turbulence
+    category: analysis
+    year: 2026
+    org: MECH 586 · Turbulent Shear Flow
+    tags: [Turbulence, LES, CFD]
+    featured: false
+    cover: ""
+    summary: >
+      A technical review comparing Smagorinsky, dynamic Smagorinsky, WALE, Vreman, and Sigma
+      models, with a focus on WALE for wall-bounded flows.
+    sections:
+      - heading: Scope
+        body: >
+          Compared the assumptions behind five eddy-viscosity closures for large-eddy simulation:
+          Smagorinsky, dynamic Smagorinsky, WALE, Vreman, and Sigma.
+      - heading: Focus
+        body: >
+          Evaluated near-wall scaling, sensitivity to strain and rotation rates, and suitability
+          for wall-bounded turbulent shear flows, with an emphasis on the WALE model.
+    images: []
+
+  - slug: stoodis
+    title: STOODIS
+    subtitle: High-power solid-motor rocket · Thunderbird Aerospace
+    category: design
+    year: 2023–25
+    org: Thunderbird Aerospace · First Nations Launch 2024
+    tags: [SolidWorks, Lathe, FEA, Composites]
+    featured: false
+    cover: "https://framerusercontent.com/images/Wj372JDPEJlPxQF1AvrKAKXetFw.jpg"
+    summary: >
+      A 180 cm fibreglass-and-aluminium rocket for the 2024 First Nations Launch. I designed the
+      fin can and built the von Kármán nosecone that housed the payload.
+    sections:
+      - heading: Mission
+        body: >
+          Stable ascent on an HP-K535 motor, dual-deployment recovery (drogue at apogee, main at
+          low altitude), a secure sensor payload, and post-flight comparison against predictions.
+      - heading: My work
+        list:
+          - Led the fin-can design, including fin geometry, retention, and interfaces to the motor mount, bulkheads, and airframe
+          - Computed the von Kármán profile, modelled and machined the nosecone, and designed the internal payload, sensor, and battery mounts
+          - Machined aluminium fuel-tank features on the lathe to tight tolerances
+          - Ran heat-transfer analysis near the nozzle of a liquid-propellant rocket to size the ablative liner
+          - Repaired transport damage to the nosecone before launch
+      - heading: Flight
+        body: >
+          Stoodis flew stable with correct drogue and main deployment, reaching about 2,200 ft by
+          GPS against 3,534 ft predicted. An eyebolt failure caused partial separation on recovery,
+          but every structure I built came back intact.
+    images:
+      - { src: "https://framerusercontent.com/images/Wj372JDPEJlPxQF1AvrKAKXetFw.jpg", caption: "" }
+      - { src: "https://framerusercontent.com/images/z3ONniogD41o0ybpcYTf73lzNxU.jpg", caption: "" }
+      - { src: "https://framerusercontent.com/images/Z4P5Uxs4jWRnIBouuVTcnrt8mNg.png", caption: "" }
+      - { src: "https://framerusercontent.com/images/dIGexTSfTb9lnqMr9WrkLhkBtc4.jpg", caption: "" }
+
+  - slug: truck-tracker
+    title: Roadside Vehicle Tracker
+    subtitle: Fine-tuned YOLO for matching vehicles to exhaust plumes
+    category: personal
+    year: 2026
+    org: Side project · supporting UBC plume research
+    tags: [Python, YOLO, Computer vision]
+    featured: false
+    cover: ""
+    summary: >
+      A vehicle detector and tracker for roadside video, built on Ultralytics YOLO with my own
+      fine-tuned model, that logs vehicle passes so they can be matched to measured exhaust plumes.
+    sections:
+      - heading: What it does
+        body: >
+          Detects and tracks trucks and cars in roadside video and outputs time-stamped vehicle
+          passes. A UBC researcher matches those passes against plume measurements to attribute
+          emissions to individual vehicles.
+      - heading: Status
+        body: In progress.
+    images: []
+
+  - slug: enord
+    title: ENORD
+    subtitle: Fully 3D-printed RC cave crawler
+    category: personal
+    year: 2024–
+    org: Personal project
+    tags: [CAD, 3D printing, Suspension design]
+    featured: false
+    cover: "https://framerusercontent.com/images/fOAmTcoDXHRsl7YfgWJYdbAEg.png"
+    summary: >
+      An RC crawler designed from scratch to handle real cave terrain, with a 4-link suspension
+      and an almost entirely 3D-printed chassis.
+    sections:
+      - heading: Targets
+        list:
+          - Traverse uneven cave terrain with high-articulation suspension
+          - About 3 hours of run time on battery
+          - At least 10 m/s on flat ground
+          - Fully 3D-printed and easy to repair
+          - Room for LEDs and a small camera
+      - heading: Design
+        body: >
+          A 4-link suspension with generous wheel travel, geometry tuned to keep wheels planted on
+          sharp terrain, and a modular chassis. Parts are PLA+ and PETG with tuned orientation,
+          infill, and wall thickness, plus metal inserts at high-load points.
+      - heading: Status
+        body: >
+          First prototype built and tested; suspension meets expectations. Next: camera and
+          lighting for cave trials, dust and moisture protection, and TPU bumpers and tires.
+    images:
+      - { src: "https://framerusercontent.com/images/fOAmTcoDXHRsl7YfgWJYdbAEg.png", caption: "" }
+      - { src: "https://framerusercontent.com/images/2LrntNq8NMXaH2IwTSXTgFrmkA.jpg", caption: "" }
+      - { src: "https://framerusercontent.com/images/pr7ST0pfN9NIxZiw01SxPqUcMI.jpg", caption: "" }
+
+# ── CV ─────────────────────────────────────────────────────────
+education:
+  - school: University of British Columbia
+    degree: B.A.Sc. Mechanical Engineering, Aerospace Specialization (Co-op)
+    dates: Sep 2021 – May 2027
+    details:
+      - "GPA 3.70 / 4.33"
+      - "Key courses: Heat Transfer (100%), Computational Fluid Dynamics (93%), Finite Element Analysis (92%), Turbulent Shear Flow (91%), Experimental Thermofluids (89%)"
+
+experience:
+  - role: Undergraduate Research Assistant
+    org: UBC Energy & Aerosol Laboratory
+    place: Vancouver, BC
+    dates: May 2026 – Aug 2026
+    points:
+      - "Built a deep-learning workflow to detect, segment, and measure soot and carbonaceous particles in TEM images, cutting analysis time by 99.6%."
+      - "Led the redesign of a thermophoretic TEM sampler, using Ansys Fluent to evaluate jet temperature gradients and nozzle velocity."
+      - "Designed a support frame for a mobile jet-engine exhaust duct with CAD, FEA, and MATLAB heat-transfer modelling."
+  - role: Junior Designer (Co-op)
+    org: Smith + Andersen
+    place: Burnaby, BC
+    dates: Jan 2025 – Aug 2025
+    points:
+      - "Delivered mechanical designs on 10+ projects, including a three-tower residential complex and a commercial pool facility."
+      - "Built an iterative LMTD heat-exchanger calculator that found significant discrepancies with manufacturer specs."
+      - "Worked in Revit, AutoCAD, Bluebeam, and Elite CHVAC to BC Plumbing Code and ASHRAE 62.1."
+  - role: Mechanical Engineering Intern (Co-op)
+    org: Ausenco
+    place: Burnaby, BC
+    dates: Sep 2023 – Jan 2024
+    points:
+      - "Wrote an Excel VBA tool to design a step shaft for a pivoting chute to AS-1403."
+      - "Ran FEA and DEM in ANSYS to validate chute designs, cutting design iteration time by 30% and material cost by 15%."
+      - "Built an idle-time forecasting tool that cut manual analysis time by 20%."
+  - role: Manufacturing Engineering (Co-op)
+    org: SSAB
+    place: Delta, BC
+    dates: May 2023 – Sep 2023
+    points:
+      - "Assembled bucket liners from point-cloud scans (ReCap, Inventor) to 98% precision."
+      - "Prepared 100+ CNC-ready nests for plasma and oxy-fuel cutting in SigmaNEST."
+
+skills:
+  - { group: "Computing & data", items: "Python, MATLAB, NumPy, OpenCV, Matplotlib, Excel VBA, LaTeX" }
+  - { group: "CFD, FEA & modelling", items: "ANSYS Fluent, OpenFOAM, ANSYS Mechanical, Abaqus, SolidWorks, Onshape" }
+  - { group: "Experimental", items: "Arduino, ESP32, thermocouples, pressure/flow sensors, oscilloscope, data logging" }
+  - { group: "Manufacturing", items: "Lathe, mill, 3-axis CNC, 3D printing, rapid prototyping" }

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="wrap page-head">
+  <div class="label">Publications</div>
+  <h1 class="display">Papers &amp; posters</h1>
+  <p class="lede">My name is underlined.</p>
+</section>
+{% for kind in ['Journal', 'Conference'] %}
+{% set group = publications | selectattr('kind', 'equalto', kind) | list %}
+{% if group %}
+<section class="wrap block">
+  <div class="block-head"><h2>{{ 'Journal articles' if kind == 'Journal' else 'Conference presentations' }}</h2></div>
+  {% for p in group %}{% include "pub.html" %}{% endfor %}
+</section>
+{% endif %}
+{% endfor %}
+{% endblock %}

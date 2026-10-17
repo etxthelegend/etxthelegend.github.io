@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Brake Chamber · Ethan Xiong</title>
+<meta name="description" content="A motorized locking device that keeps thieves from releasing a trailer&#39;s parking brakes through the caging port, while staying quick to remove for authorized maintenance.
+">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232747c9'/><text x='16' y='22' font-family='Georgia' font-size='17' text-anchor='middle' fill='white'>EX</text></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="../index.html">Ethan Xiong<span class="dot">.</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+    <label for="nav-toggle" class="nav-btn"><span></span><span></span></label>
+    <nav class="nav">
+      
+      <a href="../index.html">Home</a>
+      
+      <a href="../research.html">Research</a>
+      
+      <a href="../projects.html" class="on" aria-current="page">Projects</a>
+      
+      <a href="../publications.html">Publications</a>
+      
+      <a class="nav-cv" href="../cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap page-head">
+  <div class="crumbs"><a href="../projects.html">Projects</a> / Smart Brake Chamber</div>
+  <h1 class="display">Smart Brake Chamber</h1>
+  <p class="lede">Anti-theft caging-port protection for trailer air brakes</p>
+  <dl class="facts">
+    <div><dt>Year</dt><dd>2025–26</dd></div>
+    <div><dt>Context</dt><dd>Capstone · sponsored by Level 5 Fleet</dd></div>
+    <div><dt>Tools</dt><dd>SolidWorks · Rapid prototyping · FEA · Tolerance analysis · Mechatronics</dd></div>
+  </dl>
+</section>
+
+
+<section class="wrap">
+  <div class="gallery n3">
+    
+    <figure class="lead">
+      <a href="https://framerusercontent.com/images/mCSGF1ziyOSGzCZbyDzGpDrRw.jpg" target="_blank" rel="noopener"><img src="https://framerusercontent.com/images/mCSGF1ziyOSGzCZbyDzGpDrRw.jpg" alt="" loading="lazy"></a>
+      
+    </figure>
+    
+    <figure>
+      <a href="https://framerusercontent.com/images/QO3MulgWknqqqNtQAX4FXwryh8.jpg" target="_blank" rel="noopener"><img src="https://framerusercontent.com/images/QO3MulgWknqqqNtQAX4FXwryh8.jpg" alt="" loading="lazy"></a>
+      
+    </figure>
+    
+    <figure>
+      <a href="https://framerusercontent.com/images/zss9L1Gzhdouut4Q8mtEAjd9S9Y.png" target="_blank" rel="noopener"><img src="https://framerusercontent.com/images/zss9L1Gzhdouut4Q8mtEAjd9S9Y.png" alt="" loading="lazy"></a>
+      
+    </figure>
+    
+  </div>
+</section>
+
+
+<section class="wrap block">
+  <p class="summary">A motorized locking device that keeps thieves from releasing a trailer&#39;s parking brakes through the caging port, while staying quick to remove for authorized maintenance.
+</p>
+  <div class="rows">
+    
+    <div class="row">
+      <h3>Problem</h3>
+      <div>
+        <p>Trailer theft costs the trucking industry millions every year. A common method defeats the air-brake system by pressurizing the spring brake chamber or reaching the caging port to mechanically release the parking brakes. Our system targets three attack paths: pressurizing the supply line, uncontrolled venting, and access to the caging port. My work focused on the caging port.
+</p>
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>Requirements</h3>
+      <div>
+        
+        <ul><li>Block direct access to the caging port in normal operation</li><li>Survive at least 10 minutes of angle grinding and drilling</li><li>Unlock and come off quickly for authorized service</li><li>Fit existing brake chambers without modifying their internals</li><li>Stay cheap enough for fleet-wide deployment</li></ul>
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>Design</h3>
+      <div>
+        <p>I produced 10+ SolidWorks iterations and settled on a two-part interlocking housing that blocks any straight-line path to the port, with a servo-driven automatic lock for early functional testing. I built complete drawing sets, including exploded assemblies and detail drawings for every custom part, and ran tolerance stack-ups and FEA to check fit, manufacturability, and strength of critical components.
+</p>
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>Testing</h3>
+      <div>
+        <p>3D-printed prototypes with motors and actuators were mounted on a brake-chamber mock-up and cycled through repeated lock/unlock tests. The device locked and unlocked reliably, fully covered the port, and met 100% of its functional tests, with minor alignment refinements identified.
+</p>
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>Next steps</h3>
+      <div>
+        
+        <ul><li>Metal prototype in hardened steel</li><li>Standardized 10-minute tamper tests</li><li>Integrate with supply-line protection and venting control</li></ul>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="wrap block pager">
+  <a href="carbosamy.html"><span class="label">Previous</span>CarboSAMY</a>
+  <a href="piv.html" class="r"><span class="label">Next</span>Particle Image Velocimetry over an Airfoil</a>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-name">Ethan Theodore Xiong</div>
+      <div class="muted">UBC Energy &amp; Aerosol Laboratory<br>Vancouver, BC</div>
+    </div>
+    <div>
+      <div class="label">Contact</div>
+      <a href="mailto:etxiong2@student.ubc.ca">etxiong2@student.ubc.ca</a>
+    </div>
+    <div>
+      <div class="label">Elsewhere</div>
+      <a href="https://www.linkedin.com/in/ethanxiongetx/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/etxthelegend" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="wrap foot-small muted">© 2026 Ethan Theodore Xiong</div>
+</footer>
+
+<script>
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-toggle').checked=false}));
+
+</script>
+</body>
+</html>

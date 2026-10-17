@@ -1,0 +1,10 @@
+<a class="card" href="{{ root }}projects/{{ p.slug }}.html" data-cat="{{ p.category }}">
+  <div class="card-img{% if not p.cover %} empty{% endif %}">
+    {% if p.cover %}<img src="{{ p.cover }}" alt="" loading="lazy">{% else %}<span class="card-mono">{{ p.title }}</span>{% endif %}
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span>{{ categories[p.category] }}</span><span>{{ p.year }}</span></div>
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.summary }}</p>
+  </div>
+</a>

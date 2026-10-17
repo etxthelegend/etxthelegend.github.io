@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="wrap page-head">
+  <div class="crumbs"><a href="{{ root }}projects.html">Projects</a> / {{ p.title }}</div>
+  <h1 class="display">{{ p.title }}</h1>
+  <p class="lede">{{ p.subtitle }}</p>
+  <dl class="facts">
+    <div><dt>Year</dt><dd>{{ p.year }}</dd></div>
+    <div><dt>Context</dt><dd>{{ p.org }}</dd></div>
+    <div><dt>Tools</dt><dd>{{ p.tags | join(' · ') }}</dd></div>
+  </dl>
+</section>
+
+{% if p.images %}
+<section class="wrap">
+  <div class="gallery n{{ [p.images|length, 4]|min }}">
+    {% for im in p.images %}
+    <figure{% if loop.first %} class="lead"{% endif %}>
+      <a href="{{ im.src }}" target="_blank" rel="noopener"><img src="{{ im.src }}" alt="{{ im.caption }}" loading="lazy"></a>
+      {% if im.caption %}<figcaption>{{ im.caption }}</figcaption>{% endif %}
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="wrap block">
+  <p class="summary">{{ p.summary }}</p>
+  <div class="rows">
+    {% for s in p.sections %}
+    <div class="row">
+      <h3>{{ s.heading }}</h3>
+      <div>
+        {% if s.body %}<p>{{ s.body }}</p>{% endif %}
+        {% if s.list %}<ul>{% for li in s.list %}<li>{{ li }}</li>{% endfor %}</ul>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap block pager">
+  {% if prev %}<a href="{{ prev.slug }}.html"><span class="label">Previous</span>{{ prev.title }}</a>{% else %}<span></span>{% endif %}
+  {% if next %}<a href="{{ next.slug }}.html" class="r"><span class="label">Next</span>{{ next.title }}</a>{% endif %}
+</section>
+{% endblock %}

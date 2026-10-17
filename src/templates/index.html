@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="hero wrap">
+  <div class="hero-text">
+    <div class="label">{{ site.tagline }}</div>
+    <h1 class="display">{{ home.headline | safe }}</h1>
+    <p class="lede">{{ home.intro }}</p>
+    <div class="status"><span class="pulse"></span>{{ home.status }}</div>
+    <div class="actions">
+      <a class="btn primary" href="research.html">See my research</a>
+      <a class="btn" href="cv.html">CV</a>
+      <a class="btn" href="mailto:{{ site.email }}">Email me</a>
+    </div>
+  </div>
+  {% if home.photo %}<figure class="hero-photo"><img src="{{ home.photo }}" alt="{{ site.name }}"></figure>{% endif %}
+</section>
+
+<section class="wrap block">
+  <div class="block-head"><h2>Research interests</h2><a href="research.html" class="more">Research →</a></div>
+  <ol class="interests">
+    {% for i in interests %}
+    <li><span class="num">0{{ loop.index }}</span><h3>{{ i.title }}</h3><p>{{ i.text }}</p></li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="wrap block">
+  <div class="block-head"><h2>Selected work</h2><a href="projects.html" class="more">All projects →</a></div>
+  <div class="cards">
+    {% for p in projects if p.featured %}{% include "card.html" %}{% endfor %}
+  </div>
+</section>
+
+<section class="wrap block split">
+  <div>
+    <div class="block-head"><h2>News</h2></div>
+    <ul class="news">
+      {% for n in news %}<li><span class="date">{{ n.date }}</span><span>{{ n.text | safe }}</span></li>{% endfor %}
+    </ul>
+  </div>
+  <div>
+    <div class="block-head"><h2>Latest paper</h2><a href="publications.html" class="more">All →</a></div>
+    {% set p = publications[0] %}
+    <article class="pub feature">
+      <span class="badge {{ p.status | lower | replace(' ', '-') }}">{{ p.status }}</span>
+      <h3>{{ p.title }}</h3>
+      <p class="authors">{{ p.authors | safe }}</p>
+      <p class="venue">{{ p.venue }}</p>
+    </article>
+  </div>
+</section>
+{% endblock %}

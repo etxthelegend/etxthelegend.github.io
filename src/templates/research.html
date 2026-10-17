@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="wrap page-head">
+  <div class="label">Research</div>
+  <h1 class="display">Measuring the particles that combustion leaves behind.</h1>
+  <p class="lede">{{ research.lab }} · Supervisor: {{ research.supervisor }} · {{ research.dates }}</p>
+</section>
+
+<section class="wrap block">
+  <div class="rows">
+    {% for r in research['items'] %}
+    <div class="row">
+      <h3>{{ r.title }}</h3>
+      <div>
+        <p>{{ r.text }}</p>
+        {% if r.project %}<a class="more" href="projects/{{ r.project }}.html">Project page →</a>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap block">
+  <div class="block-head"><h2>Where I want to go next</h2></div>
+  <ol class="interests">
+    {% for i in interests %}
+    <li><span class="num">0{{ loop.index }}</span><h3>{{ i.title }}</h3><p>{{ i.text }}</p></li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="wrap block">
+  <div class="block-head"><h2>Research outputs</h2><a href="publications.html" class="more">Publications →</a></div>
+  {% for p in publications %}{% include "pub.html" %}{% endfor %}
+</section>
+{% endblock %}

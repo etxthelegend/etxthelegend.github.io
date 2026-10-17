@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="wrap page-head">
+  <div class="label">Projects</div>
+  <h1 class="display">Things I've designed, built, and measured.</h1>
+</section>
+<section class="wrap block">
+  <div class="chips" role="tablist">
+    <button class="chip on" data-f="all">All</button>
+    {% for key, label in categories.items() %}<button class="chip" data-f="{{ key }}">{{ label }}</button>{% endfor %}
+  </div>
+  <div class="cards">
+    {% for p in projects %}{% include "card.html" %}{% endfor %}
+  </div>
+</section>
+{% endblock %}
+{% block script %}
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===c));
+  const f=c.dataset.f;
+  document.querySelectorAll('.cards .card').forEach(k=>k.hidden=!(f==='all'||k.dataset.cat===f));
+}));
+{% endblock %}

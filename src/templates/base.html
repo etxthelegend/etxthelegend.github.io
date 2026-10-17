@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page_title %}{{ page_title }} · {% endif %}{{ site.name }}</title>
+<meta name="description" content="{{ description | default(site.name ~ ' — ' ~ site.tagline) }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ root }}style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232747c9'/><text x='16' y='22' font-family='Georgia' font-size='17' text-anchor='middle' fill='white'>EX</text></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="{{ root }}index.html">{{ site.name }}<span class="dot">.</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+    <label for="nav-toggle" class="nav-btn"><span></span><span></span></label>
+    <nav class="nav">
+      {% for key, label, href in nav %}
+      <a href="{{ root }}{{ href }}"{% if active == key %} class="on" aria-current="page"{% endif %}>{{ label }}</a>
+      {% endfor %}
+      <a class="nav-cv" href="{{ root }}cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+{% block body %}{% endblock %}
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-name">{{ site.full_name }}</div>
+      <div class="muted">{{ site.affiliation }}<br>{{ site.location }}</div>
+    </div>
+    <div>
+      <div class="label">Contact</div>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+    <div>
+      <div class="label">Elsewhere</div>
+      {% for l in site.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+    </div>
+  </div>
+  <div class="wrap foot-small muted">© {{ year }} {{ site.full_name }}</div>
+</footer>
+
+<script>
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-toggle').checked=false}));
+{% block script %}{% endblock %}
+</script>
+</body>
+</html>

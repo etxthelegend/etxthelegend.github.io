@@ -1,0 +1,8 @@
+<article class="pub">
+  <span class="badge {{ p.status | lower | replace(' ', '-') }}">{{ p.status }}</span>
+  <div>
+    <h3>{{ p.title }}</h3>
+    <p class="authors">{{ p.authors | safe }}</p>
+    <p class="venue">{{ p.venue }}</p>
+  </div>
+</article>

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="wrap page-head">
+  <div class="label">Curriculum vitae</div>
+  <h1 class="display">{{ site.full_name }}</h1>
+  <div class="actions"><a class="btn primary" href="{{ site.cv_pdf }}" download>Download PDF</a><a class="btn" href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+</section>
+
+<section class="wrap block">
+  <div class="block-head"><h2>Education</h2></div>
+  {% for e in education %}
+  <div class="cv-item">
+    <div class="cv-when">{{ e.dates }}</div>
+    <div><h3>{{ e.school }}</h3><p class="muted">{{ e.degree }}</p><ul>{% for d in e.details %}<li>{{ d }}</li>{% endfor %}</ul></div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="wrap block">
+  <div class="block-head"><h2>Experience</h2></div>
+  {% for x in experience %}
+  <div class="cv-item">
+    <div class="cv-when">{{ x.dates }}</div>
+    <div><h3>{{ x.role }}</h3><p class="muted">{{ x.org }} · {{ x.place }}</p><ul>{% for pt in x.points %}<li>{{ pt }}</li>{% endfor %}</ul></div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="wrap block">
+  <div class="block-head"><h2>Research outputs</h2></div>
+  {% for p in publications %}{% include "pub.html" %}{% endfor %}
+</section>
+
+<section class="wrap block">
+  <div class="block-head"><h2>Skills</h2></div>
+  {% for s in skills %}
+  <div class="cv-item"><div class="cv-when">{{ s.group }}</div><div><p>{{ s.items }}</p></div></div>
+  {% endfor %}
+</section>
+{% endblock %}
