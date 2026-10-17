@@ -44,8 +44,38 @@
     <div><dt>Context</dt><dd>Side project · supporting UBC plume research</dd></div>
     <div><dt>Tools</dt><dd>Python · YOLO · Computer vision</dd></div>
   </dl>
+  
 </section>
 
+
+<section class="wrap">
+  <div class="gallery n3">
+    
+    <figure class="lead">
+      
+      <video src="../img/truck-tracker-demo.mp4" autoplay muted loop playsinline preload="metadata" poster="../img/truck-tracker-detection.jpg"></video>
+      
+      <figcaption>The fine-tuned model tracking trucks past the counting lines, with running pass counts by direction.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/truck-tracker-detection.jpg" target="_blank" rel="noopener"><img src="../img/truck-tracker-detection.jpg" alt="A detected truck with its track ID." loading="lazy"></a>
+      
+      <figcaption>A detected truck with its track ID.</figcaption>
+    </figure>
+    
+    <figure class="">
+      
+      
+      <a href="../img/truck-tracker-multi.jpg" target="_blank" rel="noopener"><img src="../img/truck-tracker-multi.jpg" alt="Several vehicles tracked at once." loading="lazy"></a>
+      
+      <figcaption>Several vehicles tracked at once.</figcaption>
+    </figure>
+    
+  </div>
+</section>
 
 
 <section class="wrap block">
@@ -57,6 +87,15 @@
       <h3>What it does</h3>
       <div>
         <p>Detects and tracks trucks and cars in roadside video and outputs time-stamped vehicle passes. A UBC researcher matches those passes against plume measurements to attribute emissions to individual vehicles.
+</p>
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>How it counts</h3>
+      <div>
+        <p>Each detected vehicle gets a track ID. Two counting lines across the road record when a track crosses them and in which direction, so the output separates trucks from cars and left-to-right from right-to-left traffic, with a timestamp for every pass.
 </p>
         
       </div>

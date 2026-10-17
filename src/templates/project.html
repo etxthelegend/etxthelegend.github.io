@@ -9,14 +9,20 @@
     <div><dt>Context</dt><dd>{{ p.org }}</dd></div>
     <div><dt>Tools</dt><dd>{{ p.tags | join(' · ') }}</dd></div>
   </dl>
+  {% if p.links %}<div class="actions">{% for l in p.links %}<a class="btn{% if loop.first %} primary{% endif %}" href="{{ l.url if l.url.startswith('http') else root ~ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</div>{% endif %}
 </section>
 
 {% if p.images %}
 <section class="wrap">
   <div class="gallery n{{ [p.images|length, 4]|min }}">
     {% for im in p.images %}
-    <figure{% if loop.first %} class="lead"{% endif %}>
-      <a href="{{ im.src }}" target="_blank" rel="noopener"><img src="{{ im.src }}" alt="{{ im.caption }}" loading="lazy"></a>
+    <figure class="{% if loop.first %}lead{% elif im.fit == 'contain' %}wide{% endif %}">
+      {% if im.src.endswith('.mp4') %}
+      <video src="{{ root }}{{ im.src }}" autoplay muted loop playsinline preload="metadata"{% if im.poster %} poster="{{ root }}{{ im.poster }}"{% endif %}></video>
+      {% else %}
+      {% set u = im.src if im.src.startswith('http') else root ~ im.src %}
+      <a href="{{ u }}" target="_blank" rel="noopener"><img src="{{ u }}" alt="{{ im.caption }}" loading="lazy"{% if im.fit == 'contain' %} class="contain"{% endif %}></a>
+      {% endif %}
       {% if im.caption %}<figcaption>{{ im.caption }}</figcaption>{% endif %}
     </figure>
     {% endfor %}
