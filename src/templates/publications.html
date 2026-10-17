@@ -9,7 +9,7 @@
 {% set group = publications | selectattr('kind', 'equalto', kind) | list %}
 {% if group %}
 <section class="wrap block">
-  <div class="block-head"><h2>{{ 'Journal articles' if kind == 'Journal' else 'Conference presentations' }}</h2></div>
+  <div class="block-head"><h2>{{ 'Journal articles' if kind == 'Journal' else 'Conference posters' }}</h2></div>
   {% for p in group %}{% include "pub.html" %}{% endfor %}
 </section>
 {% endif %}
