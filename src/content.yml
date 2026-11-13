@@ -27,7 +27,8 @@ home:
   photo: ""   # e.g. img/ethan.jpg — leave blank to hide
 
 news:
-  - { date: "Nov 2026", text: "Presenting CarboSAMY at the <strong>ASME IMECE 2026</strong> Undergraduate Research and Design Expo in Vancouver." }
+  - { date: "Nov 2026", text: "Won <strong>second place</strong> in the Undergraduate Research and Design Expo poster competition at <strong>ASME IMECE 2026</strong> (Vancouver) for CarboSAMY." }
+  - { date: "Nov 2026", text: "Simulated thermophoretic-sampler collection efficiency over 150 cases of particle size, flow rate, and heater temperature." }
   - { date: "2026", text: "CarboSAMY manuscript <strong>submitted</strong>." }
   - { date: "Oct 2026", text: "First spark-discharge tests of the thermophoretic sampler with SMPS reference and TEM imaging." }
   - { date: "2026", text: "Poster on TEM image-analysis techniques at the <strong>Canadian Aerosol Conference</strong>." }
@@ -93,8 +94,8 @@ publications:
     kind: Journal
   - authors: "<u>Xiong, E. T.</u>, Sapkota, N., Sipkens, T. A., and Rogak, S. N."
     title: "An automated deep-learning workflow for segmenting and characterizing carbonaceous particles in transmission electron microscopy images"
-    venue: "ASME IMECE 2026, Undergraduate Research and Design Expo (poster competition), Vancouver"
-    status: Accepted
+    venue: "ASME IMECE 2026, Undergraduate Research and Design Expo, Vancouver · Second Place, student poster competition"
+    status: Award
     kind: Conference
   - authors: "<u>Xiong, E. T.</u>, Sapkota, N., Tordiff, J., Rogak, S. N., Corbin, J. C., and Sipkens, T. A."
     title: "Image analysis techniques for transmission electron microscopy analysis of carbonaceous and related particles and their application"
@@ -136,11 +137,15 @@ projects:
           data, reviewing consistency, particle identification, and mask quality.
       - heading: Status
         body: >
-          Manuscript submitted. Results were presented as a poster at the Canadian Aerosol
-          Conference (2026), and a poster has been accepted for the ASME IMECE 2026 Undergraduate
-          Research and Design Expo in Vancouver.
+          Manuscript submitted to Powder Technology. Results were presented as a poster at the
+          Canadian Aerosol Conference (2026), and the CarboSAMY poster won second place in the
+          Undergraduate Research and Design Expo student poster competition at ASME IMECE 2026 in
+          Vancouver.
     images:
       - { src: img/carbosamy-workflow.jpg, fit: contain, caption: "Inference workflow. YOLO finds and classifies particles, and its boxes prompt CarboSAM to produce masks at (a) the aggregate level and (b) the primary-particle level." }
+      - { src: img/imece-poster-presentation.jpg, caption: "Presenting the CarboSAMY poster at the ASME IMECE 2026 Undergraduate Research and Design Expo, Vancouver." }
+      - { src: img/imece-award.jpg, caption: "Receiving second place in the IMECE 2026 student poster competition." }
+      - { src: img/imece-award-certificate.jpg, fit: contain, caption: "ASME IMECE 2026 award certificate: second place, Undergraduate Research and Design Expo student poster competition." }
       - { src: img/carbosamy-tem-soot.jpg, caption: "A soot aggregate imaged by transmission electron microscopy." }
       - { src: img/carbosamy-primary-particles.jpg, caption: "CarboSAMY-pp detecting individual primary particles inside aggregates." }
       - { src: img/carbosamy-architecture.jpg, fit: contain, caption: "Architecture: a µSAM model fine-tuned on TEM masks (top), prompted by a YOLO detector (bottom)." }
@@ -187,15 +192,29 @@ projects:
         body: >
           I built an OpenFOAM model of the heated nozzle and grid region (0.70 mm tube, exit
           3.67 mm above the grid) to solve the flow and temperature fields. Its nozzle-exit speed
-          and temperature profiles match an ANSYS Fluent reference. I then track 50 nm soot
-          particles through the jet to see where and why they deposit, and compare flow rates such
-          as 0.1 and 0.5 L/min.
+          and temperature profiles match an ANSYS Fluent reference.
+      - heading: Collection-efficiency simulations
+        body: >
+          I then connected the 25.4 mm heated tube to the jet and grid region and tracked particles
+          continuously from the tube inlet to the grid, with Brownian motion and thermophoresis
+          acting on frozen gas fields. A sweep of 150 cases covered particle diameters of 5–200 nm,
+          inlet flow rates of 0.1–1.0 L/min, and tube-wall temperatures of 150–350 °C, with 540
+          particles per case. Collection efficiency (the share of inlet particles that first touch
+          the active grid) is highest at low flow, up to about 17% at 0.1 L/min, and rises with
+          wall temperature: 350 °C beat 300 °C in 28 of 30 matched cases. Higher flow lowers the
+          efficiency but delivers more particles per minute, so the effective collection flow for
+          200 nm particles climbs to about 130 mL/min at 1.0 L/min, while for 5–10 nm particles it
+          levels off near 20–40 mL/min.
       - heading: Next steps
         list:
-          - Compare CFD deposition with the measured collection efficiency
+          - Compare the simulated collection efficiency with SMPS inlet/outlet measurements
+          - Add grid warming and seed-to-seed error bars to the simulations
           - Vary flow rate, heater temperature, and jet-to-grid spacing in both model and experiment
           - Design and prototype a multi-grid package for UAV sampling
     images:
+      - { src: img/tps-efficiency-by-size.jpg, fit: contain, caption: "Simulated collection efficiency against inlet flow rate for 5–200 nm particles at tube-wall temperatures of 150–350 °C." }
+      - { src: img/tps-collection-flow-by-size.jpg, fit: contain, caption: "Effective collection flow (inlet flow × efficiency): larger particles keep gaining with flow rate, while 5–10 nm particles level off." }
+      - { src: img/tps-tube-heating.mp4, poster: img/tps-tube-heating-poster.jpg, fit: contain, caption: "Gas temperature along the 25.4 mm heated tube (0.70 mm bore) as a particle travels from inlet to outlet, shown at true aspect ratio." }
       - { src: img/tps-cfd-flow-rate.jpg, fit: contain, caption: "OpenFOAM velocity and temperature fields for the heated jet hitting the grid at 0.1 and 0.5 L/min." }
       - { src: img/tps-setup.jpg, caption: "Test setup: spark-discharge generator, SMPS, and the sampler with its control box." }
       - { src: img/tps-smps.jpg, caption: "SMPS size distribution of the generated aerosol, used as the reference." }
@@ -471,6 +490,9 @@ education:
     details:
       - "GPA 3.70 / 4.33"
       - "Key courses: Heat Transfer (100%), Computational Fluid Dynamics (93%), Finite Element Analysis (92%), Turbulent Shear Flow (91%), Experimental Thermofluids (89%)"
+
+awards:
+  - { date: "Nov 2026", title: "Second Place, Undergraduate Research and Design Expo Student Poster Competition", org: "ASME International Mechanical Engineering Congress & Exposition (IMECE) 2026, Vancouver", note: "For “An Automated Deep-Learning Workflow for Segmenting and Characterizing Carbonaceous Particles in Transmission Electron Microscopy Images”" }
 
 experience:
   - role: Undergraduate Research Assistant

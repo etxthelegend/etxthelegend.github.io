@@ -16,6 +16,18 @@
   {% endfor %}
 </section>
 
+{% if awards %}
+<section class="wrap block">
+  <div class="block-head"><h2>Awards</h2></div>
+  {% for a in awards %}
+  <div class="cv-item">
+    <div class="cv-when">{{ a.date }}</div>
+    <div><h3>{{ a.title }}</h3><p class="muted">{{ a.org }}</p>{% if a.note %}<ul><li>{{ a.note }}</li></ul>{% endif %}</div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
 <section class="wrap block">
   <div class="block-head"><h2>Experience</h2></div>
   {% for x in experience %}

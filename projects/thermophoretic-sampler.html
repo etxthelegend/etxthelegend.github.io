@@ -54,6 +54,29 @@
     <figure class="lead">
       
       
+      <a href="../img/tps-efficiency-by-size.jpg" target="_blank" rel="noopener"><img src="../img/tps-efficiency-by-size.jpg" alt="Simulated collection efficiency against inlet flow rate for 5–200 nm particles at tube-wall temperatures of 150–350 °C." loading="lazy" class="contain"></a>
+      
+      <figcaption>Simulated collection efficiency against inlet flow rate for 5–200 nm particles at tube-wall temperatures of 150–350 °C.</figcaption>
+    </figure>
+    
+    <figure class="wide">
+      
+      
+      <a href="../img/tps-collection-flow-by-size.jpg" target="_blank" rel="noopener"><img src="../img/tps-collection-flow-by-size.jpg" alt="Effective collection flow (inlet flow × efficiency): larger particles keep gaining with flow rate, while 5–10 nm particles level off." loading="lazy" class="contain"></a>
+      
+      <figcaption>Effective collection flow (inlet flow × efficiency): larger particles keep gaining with flow rate, while 5–10 nm particles level off.</figcaption>
+    </figure>
+    
+    <figure class="wide">
+      
+      <video src="../img/tps-tube-heating.mp4" autoplay muted loop playsinline preload="metadata" class="contain" poster="../img/tps-tube-heating-poster.jpg"></video>
+      
+      <figcaption>Gas temperature along the 25.4 mm heated tube (0.70 mm bore) as a particle travels from inlet to outlet, shown at true aspect ratio.</figcaption>
+    </figure>
+    
+    <figure class="wide">
+      
+      
       <a href="../img/tps-cfd-flow-rate.jpg" target="_blank" rel="noopener"><img src="../img/tps-cfd-flow-rate.jpg" alt="OpenFOAM velocity and temperature fields for the heated jet hitting the grid at 0.1 and 0.5 L/min." loading="lazy" class="contain"></a>
       
       <figcaption>OpenFOAM velocity and temperature fields for the heated jet hitting the grid at 0.1 and 0.5 L/min.</figcaption>
@@ -161,7 +184,16 @@
     <div class="row">
       <h3>CFD model</h3>
       <div>
-        <p>I built an OpenFOAM model of the heated nozzle and grid region (0.70 mm tube, exit 3.67 mm above the grid) to solve the flow and temperature fields. Its nozzle-exit speed and temperature profiles match an ANSYS Fluent reference. I then track 50 nm soot particles through the jet to see where and why they deposit, and compare flow rates such as 0.1 and 0.5 L/min.
+        <p>I built an OpenFOAM model of the heated nozzle and grid region (0.70 mm tube, exit 3.67 mm above the grid) to solve the flow and temperature fields. Its nozzle-exit speed and temperature profiles match an ANSYS Fluent reference.
+</p>
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <h3>Collection-efficiency simulations</h3>
+      <div>
+        <p>I then connected the 25.4 mm heated tube to the jet and grid region and tracked particles continuously from the tube inlet to the grid, with Brownian motion and thermophoresis acting on frozen gas fields. A sweep of 150 cases covered particle diameters of 5–200 nm, inlet flow rates of 0.1–1.0 L/min, and tube-wall temperatures of 150–350 °C, with 540 particles per case. Collection efficiency (the share of inlet particles that first touch the active grid) is highest at low flow, up to about 17% at 0.1 L/min, and rises with wall temperature: 350 °C beat 300 °C in 28 of 30 matched cases. Higher flow lowers the efficiency but delivers more particles per minute, so the effective collection flow for 200 nm particles climbs to about 130 mL/min at 1.0 L/min, while for 5–10 nm particles it levels off near 20–40 mL/min.
 </p>
         
       </div>
@@ -171,7 +203,7 @@
       <h3>Next steps</h3>
       <div>
         
-        <ul><li>Compare CFD deposition with the measured collection efficiency</li><li>Vary flow rate, heater temperature, and jet-to-grid spacing in both model and experiment</li><li>Design and prototype a multi-grid package for UAV sampling</li></ul>
+        <ul><li>Compare the simulated collection efficiency with SMPS inlet/outlet measurements</li><li>Add grid warming and seed-to-seed error bars to the simulations</li><li>Vary flow rate, heater temperature, and jet-to-grid spacing in both model and experiment</li><li>Design and prototype a multi-grid package for UAV sampling</li></ul>
       </div>
     </div>
     
