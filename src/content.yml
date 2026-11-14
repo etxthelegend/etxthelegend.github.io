@@ -239,7 +239,7 @@ projects:
     org: Capstone Team 12, BrakeIn Security · sponsored by Level5Fleet
     tags: [SolidWorks, Engineering drawings, FEA, Tolerance analysis, Solenoid actuation, Rapid prototyping]
     featured: true
-    cover: img/sbc-workbench.jpg
+    cover: img/sbc-cad-exploded-cover.jpg
     summary: >
       A motorized locking device that keeps thieves from releasing a trailer's parking brakes
       through the caging port, while staying quick to remove for authorized maintenance.
