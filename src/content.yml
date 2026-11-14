@@ -302,7 +302,8 @@ projects:
     org: UBC Mechanical Engineering
     tags: [PIV, Experimental fluids, Aerodynamics]
     featured: true
-    cover: "https://framerusercontent.com/images/TUUhlSXftG9a8mjzvsinC1qG0.png"
+    cover: img/piv-cover.mp4
+    cover_poster: img/piv-cover-poster.jpg
     summary: >
       PIV in a recirculating water channel to map the flow around a NACA 0012 from ~1° to ~38°
       angle of attack, and estimate lift from circulation.
@@ -334,6 +335,7 @@ projects:
           ripples and optical distortion, large seed particles limiting resolution, and blockage
           near the airfoil.
     images:
+      - { src: img/piv-aoa37-velocity.mp4, poster: img/piv-aoa37-velocity-poster.jpg, fit: contain, caption: "PIV velocity field around the NACA 0012 at 37.7° angle of attack (flow from right to left): the stalled airfoil sheds a wide, unsteady wake." }
       - { src: "https://framerusercontent.com/images/TUUhlSXftG9a8mjzvsinC1qG0.png", caption: "" }
       - { src: "https://framerusercontent.com/images/QMJNuFBhCEaLTJkuGlTx01qNDU.png", caption: "" }
       - { src: "https://framerusercontent.com/images/qnAsX3ECOH3sLoxx7LVNDeT54Y.png", caption: "" }
