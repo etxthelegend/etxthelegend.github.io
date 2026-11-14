@@ -97,6 +97,8 @@ publications:
     venue: "ASME IMECE 2026, Undergraduate Research and Design Expo, Vancouver · Second Place, student poster competition"
     status: Award
     kind: Conference
+    link: files/Xiong_IMECE2026_CarboSAMY_poster.pdf
+    link_label: Poster (PDF)
   - authors: "<u>Xiong, E. T.</u>, Sapkota, N., Tordiff, J., Rogak, S. N., Corbin, J. C., and Sipkens, T. A."
     title: "Image analysis techniques for transmission electron microscopy analysis of carbonaceous and related particles and their application"
     venue: "Canadian Aerosol Conference, 2026"
@@ -116,6 +118,8 @@ projects:
     tags: [Python, Deep learning, Image processing, TEM]
     featured: true
     cover: img/carbosamy-primary-particles.jpg
+    links:
+      - { label: IMECE 2026 poster (PDF), url: files/Xiong_IMECE2026_CarboSAMY_poster.pdf }
     summary: >
       A deep-learning workflow that finds, segments, and measures soot and other carbonaceous
       particles in electron-microscope images, reducing analysis time by 99.6%.
@@ -143,6 +147,7 @@ projects:
           Vancouver.
     images:
       - { src: img/carbosamy-workflow.jpg, fit: contain, caption: "Inference workflow. YOLO finds and classifies particles, and its boxes prompt CarboSAM to produce masks at (a) the aggregate level and (b) the primary-particle level." }
+      - { src: img/carbosamy-imece-poster.jpg, fit: contain, caption: "The CarboSAMY poster presented at ASME IMECE 2026 (second place, Undergraduate Research and Design Expo)." }
       - { src: img/imece-poster-presentation.jpg, caption: "Presenting the CarboSAMY poster at the ASME IMECE 2026 Undergraduate Research and Design Expo, Vancouver." }
       - { src: img/imece-award.jpg, caption: "Receiving second place in the IMECE 2026 student poster competition." }
       - { src: img/imece-award-certificate.jpg, fit: contain, caption: "ASME IMECE 2026 award certificate: second place, Undergraduate Research and Design Expo student poster competition." }

@@ -3,6 +3,6 @@
   <div>
     <h3>{{ p.title }}</h3>
     <p class="authors">{{ p.authors | safe }}</p>
-    <p class="venue">{{ p.venue }}</p>
+    <p class="venue">{{ p.venue }}{% if p.link %} · <a href="{{ p.link if p.link.startswith('http') else root ~ p.link }}" target="_blank" rel="noopener">{{ p.link_label or 'Link' }}</a>{% endif %}</p>
   </div>
 </article>
