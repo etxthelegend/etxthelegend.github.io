@@ -70,8 +70,8 @@ p+p{margin-top:12px}
 .card:hover{transform:translateY(-3px);border-color:var(--ink2)}
 .card[hidden]{display:none}
 .card-img{aspect-ratio:16/10;background:var(--bg2);overflow:hidden}
-.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.card:hover .card-img img{transform:scale(1.03)}
+.card-img img,.card-img video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.card:hover .card-img img,.card:hover .card-img video{transform:scale(1.03)}
 .card-img.empty{display:flex;align-items:flex-end;padding:18px;background:
   radial-gradient(circle at 80% 20%,var(--accent-soft),transparent 55%),
   repeating-linear-gradient(135deg,transparent 0 11px,color-mix(in srgb,var(--rule) 70%,transparent) 11px 12px),var(--bg2)}

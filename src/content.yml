@@ -115,7 +115,7 @@ projects:
     org: UBC Energy & Aerosol Laboratory
     tags: [Python, Deep learning, Image processing, TEM]
     featured: true
-    cover: img/carbosamy-tem-soot.jpg
+    cover: img/carbosamy-primary-particles.jpg
     summary: >
       A deep-learning workflow that finds, segments, and measures soot and other carbonaceous
       particles in electron-microscope images, reducing analysis time by 99.6%.
@@ -161,7 +161,8 @@ projects:
     org: MECH 493 thesis project · UBC Energy & Aerosol Laboratory
     tags: [OpenFOAM, CFD, SMPS, Spark-discharge aerosol, TEM, Arduino]
     featured: false
-    cover: img/tps-tem-1.jpg
+    cover: img/tps-cover.mp4
+    cover_poster: img/tps-cover-poster.jpg
     summary: >
       Testing the UBC thermophoretic sampler against a known aerosol and an OpenFOAM model, as
       the first step toward a package that collects several TEM samples during one UAV flight.
