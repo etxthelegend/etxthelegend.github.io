@@ -30,7 +30,7 @@ news:
   - { date: "Nov 2026", text: "Won <strong>second place</strong> in the Undergraduate Research and Design Expo poster competition at <strong>ASME IMECE 2026</strong> (Vancouver) for CarboSAMY." }
   - { date: "Nov 2026", text: "Simulated thermophoretic-sampler collection efficiency over 150 cases of particle size, flow rate, and heater temperature." }
   - { date: "Oct 2026", text: "First spark-discharge tests of the thermophoretic sampler with SMPS reference and TEM imaging." }
-  - { date: "2026", text: "Poster on TEM image-analysis techniques at the <strong>Canadian Aerosol Conference</strong>." }
+  - { date: "Jul 2026", text: "Poster on TEM image-analysis techniques at the <strong>Canadian Aerosol Conference</strong> (Ottawa)." }
   - { date: "Jul 2026", text: "Started mentoring two students on TEM annotation for model validation." }
   - { date: "May 2026", text: "Joined the UBC Energy & Aerosol Laboratory as an undergraduate research assistant." }
 
@@ -101,7 +101,7 @@ publications:
     link_label: Poster (PDF)
   - authors: "<u>Xiong, E. T.</u>, Sapkota, N., Tordiff, J., Rogak, S. N., Corbin, J. C., and Sipkens, T. A."
     title: "Image analysis techniques for transmission electron microscopy analysis of carbonaceous and related particles and their application"
-    venue: "Canadian Aerosol Conference, 2026"
+    venue: "Canadian Aerosol Conference, Ottawa, July 2026"
     status: Poster
     kind: Conference
 
@@ -142,7 +142,7 @@ projects:
       - heading: Status
         body: >
           Manuscript under review at Powder Technology. Results were presented as a poster at the
-          Canadian Aerosol Conference (2026), and the CarboSAMY poster won second place in the
+          Canadian Aerosol Conference (Ottawa, July 2026), and the CarboSAMY poster won second place in the
           Undergraduate Research and Design Expo student poster competition at ASME IMECE 2026 in
           Vancouver.
     images:
