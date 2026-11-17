@@ -28,9 +28,9 @@ home:
   photo: ""   # e.g. img/ethan.jpg — leave blank to hide
 
 news:
+  - { date: "Nov 2026", text: "CarboSAMY manuscript <strong>under review</strong> at <em>Powder Technology</em>." }
   - { date: "Nov 2026", text: "Won <strong>second place</strong> in the Undergraduate Research and Design Expo poster competition at <strong>ASME IMECE 2026</strong> (Vancouver) for CarboSAMY." }
   - { date: "Nov 2026", text: "Simulated thermophoretic-sampler collection efficiency over 150 cases of particle size, flow rate, and heater temperature." }
-  - { date: "2026", text: "CarboSAMY manuscript <strong>submitted</strong>." }
   - { date: "Oct 2026", text: "First spark-discharge tests of the thermophoretic sampler with SMPS reference and TEM imaging." }
   - { date: "2026", text: "Poster on TEM image-analysis techniques at the <strong>Canadian Aerosol Conference</strong>." }
   - { date: "Jul 2026", text: "Started mentoring two students on TEM annotation for model validation." }
@@ -61,7 +61,7 @@ research:
       text: >
         Built CarboSAMY, an automated workflow that detects, segments, and measures the morphology
         of soot and other carbonaceous particles in transmission electron microscopy images,
-        cutting analysis time by 99.6% compared with manual analysis. Manuscript submitted.
+        cutting analysis time by 99.6% compared with manual analysis. Manuscript under review at Powder Technology.
     - title: Thermophoretic TEM sampler redesign
       project: thermophoretic-sampler
       text: >
@@ -80,9 +80,9 @@ research:
 
 publications:
   - authors: "<u>Xiong, E. T.</u>, Sapkota, N., Sipkens, T. A., and Rogak, S. N."
-    title: "CarboSAMY: An automated deep-learning workflow for characterizing and segmenting carbonaceous particles in transmission electron microscopy images"
+    title: "CarboSAMY: An automated deep-learning workflow for characterizing carbonaceous particles in transmission electron microscopy images"
     venue: "Powder Technology"
-    status: Submitted
+    status: Under review
     kind: Journal
   - authors: "Sapkota, N., Mehri, R., Corbin, J. C., <u>Xiong, E. T.</u>, Rogak, S. N., and Sipkens, T. A."
     title: "Investigating morphology of fresh and compacted soot aggregates using bidimensional effective density and transmission electron microscopy"
@@ -143,7 +143,7 @@ projects:
           data, reviewing consistency, particle identification, and mask quality.
       - heading: Status
         body: >
-          Manuscript submitted to Powder Technology. Results were presented as a poster at the
+          Manuscript under review at Powder Technology. Results were presented as a poster at the
           Canadian Aerosol Conference (2026), and the CarboSAMY poster won second place in the
           Undergraduate Research and Design Expo student poster competition at ASME IMECE 2026 in
           Vancouver.
