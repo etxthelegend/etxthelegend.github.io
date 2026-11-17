@@ -16,13 +16,14 @@ site:
   cv_pdf: files/Ethan_Xiong_CV.pdf
 
 home:
-  headline: "Soot, flames, and the <em>flows</em> that carry them."
+  headline: "Particles, flows, and the <em>tools</em> to measure them."
   intro: >
     I'm a final-year Mechanical Engineering student at the University of British Columbia,
     specializing in aerospace. I work in the UBC Energy & Aerosol Laboratory with
     Prof. Steven Rogak, where I build deep-learning tools that measure soot particles in
-    electron-microscope images. I'm heading toward graduate research in gas-turbine
-    combustion, sustainable aviation fuels, and the emissions they produce.
+    electron-microscope images. I'm heading toward graduate research in nanoparticles and
+    nanomaterials, combustion emissions, and the experimental and computational tools used to
+    study them.
   status: "Graduating May 2027 · Open to graduate research positions"
   photo: ""   # e.g. img/ethan.jpg — leave blank to hide
 
@@ -36,10 +37,11 @@ news:
   - { date: "May 2026", text: "Joined the UBC Energy & Aerosol Laboratory as an undergraduate research assistant." }
 
 interests:
-  - title: Gas-turbine combustion & turbomachinery
+  - title: Carbon nanotubes & nanomaterials
     text: >
-      How combustor design, operating conditions, and fuel properties shape efficiency,
-      operability, flame stability, heat transfer, pressure loss, and overall propulsion performance.
+      How synthesis conditions, catalysts, and growth environments control the structure,
+      morphology, and properties of carbon nanotubes and other nanomaterials, and how they can be
+      characterized and applied in energy and aerospace systems.
   - title: Sustainable aviation fuels, soot & emissions
     text: >
       How conventional and alternative jet fuels change soot/nvPM formation, gaseous emissions,
