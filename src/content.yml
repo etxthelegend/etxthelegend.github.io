@@ -28,6 +28,7 @@ home:
 news:
   - { date: "Nov 2026", text: "CarboSAMY manuscript <strong>under review</strong> at <em>Powder Technology</em>." }
   - { date: "Nov 2026", text: "Won <strong>second place</strong> in the Undergraduate Research and Design Expo poster competition at <strong>ASME IMECE 2026</strong> (Vancouver) for CarboSAMY." }
+  - { date: "Nov 2026", text: "Designed and machined the supersonic inlet nozzle for a new lab nanoparticle generator, as a co-inventor." }
   - { date: "Nov 2026", text: "Bench-tested a new heater wire for the thermophoretic sampler, reaching 321 °C." }
   - { date: "Nov 2026", text: "Simulated thermophoretic-sampler collection efficiency over 150 cases of particle size, flow rate, and heater temperature." }
   - { date: "Oct 2026", text: "First spark-discharge tests of the thermophoretic sampler with SMPS reference and TEM imaging." }
@@ -258,6 +259,67 @@ projects:
               - { src: img/tps-heater-coil.jpg, fit: tall, caption: "The new heating-wire coil on test leads." }
               - { src: img/tps-heater-supply.jpg, fit: tall, caption: "Powered from a DC bench supply." }
               - { src: img/tps-heater-321c.jpg, fit: tall, caption: "Thermocouple reading of 321 °C on the heater controller." }
+
+  - slug: nanoparticle-generator
+    title: Nanoparticle Generator
+    subtitle: Supersonic inlet nozzle design, CFD, and precision machining for a new lab aerosol source
+    category: research
+    year: 2026
+    org: UBC Energy & Aerosol Laboratory · co-inventor
+    tags: [ANSYS Fluent, Compressible flow, Supersonic nozzle design, Lathe machining, Precision manufacturing]
+    featured: false
+    cover: img/npg-cover.jpg
+    summary: >
+      A new lab nanoparticle generator, where I'm a co-inventor: I designed and machined its
+      supersonic inlet nozzle and checked the flow in ANSYS Fluent.
+    sections:
+      - heading: My role
+        list:
+          - Designed the converging–diverging inlet nozzle that accelerates the flow to supersonic speed
+          - Ran ANSYS Fluent simulations of the generator's compressible flow
+          - Sourced the tooling, including tapered drill bits, and machined two nozzles on a manual lathe
+      - heading: Note
+        body: >
+          Some details are left out while the invention is being protected.
+    phases:
+      - title: "Phase 1 · CFD"
+        text: >
+          Compressible-flow simulations in ANSYS Fluent to confirm the design before and alongside
+          manufacturing.
+        steps:
+          - title: Choked, supersonic flow
+            text: >
+              The simulations confirm that the nozzle throat is choked, so the mass flow is set by the
+              upstream conditions, and that the jet leaves the nozzle at supersonic speed (Mach number
+              above 1).
+            images:
+              - { src: img/npg-cfd-mach.jpg, fit: contain, caption: "Mach-number contours: the flow accelerates through the nozzle and leaves as a supersonic jet." }
+          - title: No trapped recirculation
+            text: >
+              I also checked that recirculation driven by the jet doesn't stay trapped in the side
+              channel, so gas and particles are swept through instead of lingering.
+            images:
+              - { src: img/npg-cfd-temperature.jpg, fit: contain, caption: "Static-temperature contours: the gas cools as it expands through the nozzle, while the heated channel stays hot." }
+      - title: "Phase 2 · Manufacturing"
+        text: >
+          The nozzle is small, so the tolerances are tight and there is little room for error. I
+          bought the tooling it needed, including tapered drill bits for the converging and
+          diverging sections, and machined two nozzles on a manual lathe.
+        steps:
+          - title: Machining on the lathe
+            text: >
+              Drilling the tapered bore with the part held in the chuck, then turning the outside
+              profile to size.
+            images:
+              - { src: img/npg-lathe-drilling.jpg, fit: tall, caption: "Drilling the nozzle bore with a tapered bit on the lathe." }
+              - { src: img/npg-lathe-turning.jpg, fit: tall, caption: "Turning the outer profile of a nozzle blank." }
+          - title: Finished nozzles
+            text: >
+              Two finished aluminum nozzles, checked against the drawing, with the inlet fitting they
+              mount into.
+            images:
+              - { src: img/npg-nozzle-assembly.jpg, caption: "The two machined nozzles with the inlet fitting and its tube." }
+              - { src: img/npg-nozzles-drawing.jpg, fit: tall, caption: "The finished parts next to the engineering drawing." }
 
   - slug: smart-brake-chamber
     title: Smart Brake Chamber
