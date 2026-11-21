@@ -565,6 +565,7 @@ experience:
 
 skills:
   - { group: "Computing & data", items: "Python, MATLAB, NumPy, OpenCV, Matplotlib, Excel VBA, LaTeX" }
+  - { group: "Machine learning & computer vision", items: "PyTorch, Ultralytics YOLO (object detection, classification & tracking), Segment Anything (SAM / µSAM), model fine-tuning, instance segmentation, dataset annotation & curation, model evaluation (IoU, precision/recall)" }
   - { group: "CFD, FEA & modelling", items: "ANSYS Fluent, OpenFOAM, ANSYS Mechanical, Abaqus, SolidWorks, Onshape" }
   - { group: "Experimental", items: "Arduino, ESP32, thermocouples, pressure/flow sensors, oscilloscope, data logging" }
   - { group: "Manufacturing", items: "Lathe, mill, 3-axis CNC, 3D printing, rapid prototyping" }
