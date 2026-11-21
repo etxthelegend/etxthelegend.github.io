@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+{% macro fig(im, cls='') %}
+    <figure class="{{ cls }}">
+      {% if im.src.endswith('.mp4') %}
+      <video src="{{ root }}{{ im.src }}" autoplay muted loop playsinline preload="metadata"{% if im.fit == 'contain' %} class="contain"{% endif %}{% if im.poster %} poster="{{ root }}{{ im.poster }}"{% endif %}></video>
+      {% else %}
+      {% set u = im.src if im.src.startswith('http') else root ~ im.src %}
+      <a href="{{ u }}" target="_blank" rel="noopener"><img src="{{ u }}" alt="{{ im.caption }}" loading="lazy"{% if im.fit %} class="{{ im.fit }}"{% endif %}></a>
+      {% endif %}
+      {% if im.caption %}<figcaption>{{ im.caption }}</figcaption>{% endif %}
+    </figure>
+{% endmacro %}
 {% block body %}
 <section class="wrap page-head">
   <div class="crumbs"><a href="{{ root }}projects.html">Projects</a> / {{ p.title }}</div>
@@ -33,7 +44,7 @@
 <section class="wrap block">
   <p class="summary">{{ p.summary }}</p>
   <div class="rows">
-    {% for s in p.sections %}
+    {% for s in p.sections if not s.after_phases %}
     <div class="row">
       <h3>{{ s.heading }}</h3>
       <div>
@@ -44,6 +55,33 @@
     {% endfor %}
   </div>
 </section>
+
+
+{% if p.phases %}
+{% for ph in p.phases %}
+<section class="wrap block phase">
+  <div class="block-head"><h2>{{ ph.title }}</h2></div>
+  {% if ph.text %}<p class="phase-intro">{{ ph.text }}</p>{% endif %}
+  {% for st in ph.steps %}
+  <div class="step">
+    <div class="step-head"><span class="step-n">{{ loop.index }}</span><div><h3>{{ st.title }}</h3>{% if st.date %}<span class="step-date">{{ st.date }}</span>{% endif %}</div></div>
+    {% if st.text %}<p class="step-text">{{ st.text }}</p>{% endif %}
+    {% if st.images %}{% set n = st.images|length %}<div class="sgallery c{{ 3 if n == 3 else [n, 2]|min }}">{% for im in st.images %}{{ fig(im) }}{% endfor %}</div>{% endif %}
+  </div>
+  {% endfor %}
+</section>
+{% endfor %}
+{% set later = p.sections | selectattr('after_phases') | list %}
+{% if later %}
+<section class="wrap block">
+  <div class="rows">
+    {% for s in later %}
+    <div class="row"><h3>{{ s.heading }}</h3><div>{% if s.body %}<p>{{ s.body }}</p>{% endif %}{% if s.list %}<ul>{% for li in s.list %}<li>{{ li }}</li>{% endfor %}</ul>{% endif %}</div></div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endif %}
 
 <section class="wrap block pager">
   {% if prev %}<a href="{{ prev.slug }}.html"><span class="label">Previous</span>{{ prev.title }}</a>{% else %}<span></span>{% endif %}

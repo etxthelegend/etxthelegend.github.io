@@ -183,3 +183,21 @@ figcaption{font:italic 14px/1.4 var(--serif);color:var(--muted);padding:8px 10px
   .hero{padding-top:48px}
   .summary{font-size:21px}
 }
+
+/* project phases */
+.phase .phase-intro{color:var(--ink2);max-width:70ch;margin:-4px 0 8px}
+.step{padding:28px 0;border-bottom:1px solid var(--rule)}
+.step-head{display:flex;gap:14px;align-items:baseline}
+.step-n{font:500 13px/1 var(--mono);color:var(--accent);border:1px solid var(--accent);border-radius:999px;min-width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.step-head h3{font:400 21px/1.25 var(--serif);display:inline}
+.step-date{font:12px var(--mono);color:var(--muted,#777);margin-left:10px;letter-spacing:.04em;text-transform:uppercase}
+.step-text{color:var(--ink2);max-width:70ch;margin:10px 0 0 40px}
+.sgallery{display:grid;gap:12px;margin:18px 0 0 40px;grid-template-columns:1fr 1fr;align-items:start}
+.sgallery.c1{grid-template-columns:1fr}
+.sgallery.c3{grid-template-columns:1fr 1fr 1fr}
+.sgallery figure{background:var(--bg2);border-radius:4px;overflow:hidden;margin:0}
+.sgallery img,.sgallery video{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover}
+.sgallery img.contain,.sgallery img.plot{aspect-ratio:auto;object-fit:contain;background:#fff;padding:10px}
+.sgallery video.contain{aspect-ratio:auto;object-fit:contain;background:#000}
+.sgallery img.tall{aspect-ratio:3/4}
+@media (max-width:760px){.sgallery,.sgallery.c3{grid-template-columns:1fr;margin-left:0}.step-text{margin-left:0}}

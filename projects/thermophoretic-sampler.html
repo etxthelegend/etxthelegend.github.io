@@ -48,106 +48,6 @@
 </section>
 
 
-<section class="wrap">
-  <div class="gallery n4">
-    
-    <figure class="lead">
-      
-      
-      <a href="../img/tps-efficiency-by-size.jpg" target="_blank" rel="noopener"><img src="../img/tps-efficiency-by-size.jpg" alt="Simulated collection efficiency against inlet flow rate for 5–200 nm particles at tube-wall temperatures of 150–350 °C." loading="lazy" class="contain"></a>
-      
-      <figcaption>Simulated collection efficiency against inlet flow rate for 5–200 nm particles at tube-wall temperatures of 150–350 °C.</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      
-      <a href="../img/tps-collection-flow-by-size.jpg" target="_blank" rel="noopener"><img src="../img/tps-collection-flow-by-size.jpg" alt="Effective collection flow (inlet flow × efficiency): larger particles keep gaining with flow rate, while 5–10 nm particles level off." loading="lazy" class="contain"></a>
-      
-      <figcaption>Effective collection flow (inlet flow × efficiency): larger particles keep gaining with flow rate, while 5–10 nm particles level off.</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      <video src="../img/tps-tube-heating.mp4" autoplay muted loop playsinline preload="metadata" class="contain" poster="../img/tps-tube-heating-poster.jpg"></video>
-      
-      <figcaption>Gas temperature along the 25.4 mm heated tube (0.70 mm bore) as a particle travels from inlet to outlet, shown at true aspect ratio.</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      
-      <a href="../img/tps-cfd-flow-rate.jpg" target="_blank" rel="noopener"><img src="../img/tps-cfd-flow-rate.jpg" alt="OpenFOAM velocity and temperature fields for the heated jet hitting the grid at 0.1 and 0.5 L/min." loading="lazy" class="contain"></a>
-      
-      <figcaption>OpenFOAM velocity and temperature fields for the heated jet hitting the grid at 0.1 and 0.5 L/min.</figcaption>
-    </figure>
-    
-    <figure class="">
-      
-      
-      <a href="../img/tps-setup.jpg" target="_blank" rel="noopener"><img src="../img/tps-setup.jpg" alt="Test setup: spark-discharge generator, SMPS, and the sampler with its control box." loading="lazy"></a>
-      
-      <figcaption>Test setup: spark-discharge generator, SMPS, and the sampler with its control box.</figcaption>
-    </figure>
-    
-    <figure class="">
-      
-      
-      <a href="../img/tps-smps.jpg" target="_blank" rel="noopener"><img src="../img/tps-smps.jpg" alt="SMPS size distribution of the generated aerosol, used as the reference." loading="lazy"></a>
-      
-      <figcaption>SMPS size distribution of the generated aerosol, used as the reference.</figcaption>
-    </figure>
-    
-    <figure class="">
-      
-      
-      <a href="../img/tps-tem-1.jpg" target="_blank" rel="noopener"><img src="../img/tps-tem-1.jpg" alt="TEM image of spark-generated aggregates collected by the sampler on a lacey carbon grid." loading="lazy"></a>
-      
-      <figcaption>TEM image of spark-generated aggregates collected by the sampler on a lacey carbon grid.</figcaption>
-    </figure>
-    
-    <figure class="">
-      
-      
-      <a href="../img/tps-tem-2.jpg" target="_blank" rel="noopener"><img src="../img/tps-tem-2.jpg" alt="Another region of the same grid." loading="lazy"></a>
-      
-      <figcaption>Another region of the same grid.</figcaption>
-    </figure>
-    
-    <figure class="">
-      
-      
-      <a href="../img/tps-controller.jpg" target="_blank" rel="noopener"><img src="../img/tps-controller.jpg" alt="The sampler&#39;s control box on the bench supply." loading="lazy"></a>
-      
-      <figcaption>The sampler&#39;s control box on the bench supply.</figcaption>
-    </figure>
-    
-    <figure class="">
-      
-      
-      <a href="../img/tps-controller-panel.jpg" target="_blank" rel="noopener"><img src="../img/tps-controller-panel.jpg" alt="Front panel with an OLED sampling timer and push-button controls." loading="lazy"></a>
-      
-      <figcaption>Front panel with an OLED sampling timer and push-button controls.</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      <video src="../img/tps-cfd-particles.mp4" autoplay muted loop playsinline preload="metadata" class="contain" poster="../img/tps-cfd-particles-poster.jpg"></video>
-      
-      <figcaption>OpenFOAM particle tracking: 50 nm soot tracers carried by the jet onto the grid (dots enlarged for visibility).</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      
-      <a href="../img/tps-cfd-fluent-validation.jpg" target="_blank" rel="noopener"><img src="../img/tps-cfd-fluent-validation.jpg" alt="Nozzle-exit speed and temperature profiles: OpenFOAM against the ANSYS Fluent reference." loading="lazy" class="contain"></a>
-      
-      <figcaption>Nozzle-exit speed and temperature profiles: OpenFOAM against the ANSYS Fluent reference.</figcaption>
-    </figure>
-    
-  </div>
-</section>
-
 
 <section class="wrap block">
   <p class="summary">Testing the UBC thermophoretic sampler against a known aerosol and an OpenFOAM model, as the first step toward a package that collects several TEM samples during one UAV flight.
@@ -163,52 +63,204 @@
       </div>
     </div>
     
-    <div class="row">
-      <h3>Experiment</h3>
-      <div>
-        <p>A Palas GFG 1000 spark-discharge generator produces a controlled aerosol. A scanning mobility particle sizer (SMPS) measures its size distribution and concentration as the reference, and the sampler collects particles onto a TEM grid for a known flow rate and time. The grids are imaged, and the particles will be counted with CarboSAMY. In the first runs the SMPS measured about 1.1 × 10⁷ particles/cm³ with a geometric mean diameter of 24.5 nm.
+  </div>
+</section>
+
+
+
+
+<section class="wrap block phase">
+  <div class="block-head"><h2>Phase 1 · CFD modelling</h2></div>
+  <p class="phase-intro">An OpenFOAM model of the sampler, used to predict how much of the incoming aerosol lands on the grid and which operating conditions maximize it. Shown in the order the work was done.
 </p>
-        
-      </div>
-    </div>
-    
-    <div class="row">
-      <h3>First results</h3>
-      <div>
-        <p>10- and 20-minute samples collected plenty of aggregates on lacey carbon grids. The deposit is not uniform across the grid, though, so counting particles on the grid alone can&#39;t give a reliable collection efficiency. The next tests will put the SMPS on the sampler&#39;s exhaust as well and compare inlet and outlet concentrations.
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">1</span><div><h3>Jet and grid model, validated</h3></div></div>
+    <p class="step-text">I modelled the heated nozzle and grid region (0.70 mm tube, exit 3.67 mm above the grid) and checked its nozzle-exit speed and temperature profiles against an ANSYS Fluent reference, then compared flow rates of 0.1 and 0.5 L/min.
 </p>
-        
-      </div>
-    </div>
-    
-    <div class="row">
-      <h3>CFD model</h3>
-      <div>
-        <p>I built an OpenFOAM model of the heated nozzle and grid region (0.70 mm tube, exit 3.67 mm above the grid) to solve the flow and temperature fields. Its nozzle-exit speed and temperature profiles match an ANSYS Fluent reference.
+    <div class="sgallery c2">
+    <figure class="">
+      
+      
+      <a href="../img/tps-cfd-fluent-validation.jpg" target="_blank" rel="noopener"><img src="../img/tps-cfd-fluent-validation.jpg" alt="Nozzle-exit speed and temperature profiles: OpenFOAM against the ANSYS Fluent reference." loading="lazy" class="contain"></a>
+      
+      <figcaption>Nozzle-exit speed and temperature profiles: OpenFOAM against the ANSYS Fluent reference.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/tps-cfd-flow-rate.jpg" target="_blank" rel="noopener"><img src="../img/tps-cfd-flow-rate.jpg" alt="Velocity and temperature fields for the heated jet hitting the grid at 0.1 and 0.5 L/min." loading="lazy" class="contain"></a>
+      
+      <figcaption>Velocity and temperature fields for the heated jet hitting the grid at 0.1 and 0.5 L/min.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">2</span><div><h3>Particle tracking in the jet</h3></div></div>
+    <p class="step-text">Soot tracers released into the solved jet show where and why particles reach the grid.
 </p>
-        
-      </div>
-    </div>
-    
-    <div class="row">
-      <h3>Collection-efficiency simulations</h3>
-      <div>
-        <p>I then connected the 25.4 mm heated tube to the jet and grid region and tracked particles continuously from the tube inlet to the grid, with Brownian motion and thermophoresis acting on frozen gas fields. A sweep of 150 cases covered particle diameters of 5–200 nm, inlet flow rates of 0.1–1.0 L/min, and tube-wall temperatures of 150–350 °C, with 540 particles per case. Collection efficiency (the share of inlet particles that first touch the active grid) is highest at low flow, up to about 17% at 0.1 L/min, and rises with wall temperature: 350 °C beat 300 °C in 28 of 30 matched cases. Higher flow lowers the efficiency but delivers more particles per minute, so the effective collection flow for 200 nm particles climbs to about 130 mL/min at 1.0 L/min, while for 5–10 nm particles it levels off near 20–40 mL/min.
+    <div class="sgallery c1">
+    <figure class="">
+      
+      <video src="../img/tps-cfd-particles.mp4" autoplay muted loop playsinline preload="metadata" class="contain" poster="../img/tps-cfd-particles-poster.jpg"></video>
+      
+      <figcaption>50 nm soot tracers carried by the jet onto the grid (dots enlarged for visibility).</figcaption>
+    </figure>
+</div>
+  </div>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">3</span><div><h3>Heated tube added</h3><span class="step-date">Nov 2026</span></div></div>
+    <p class="step-text">I connected the 25.4 mm heated tube upstream of the jet so particles are tracked continuously from the tube inlet to the grid, with Brownian motion and thermophoresis.
 </p>
-        
-      </div>
-    </div>
+    <div class="sgallery c1">
+    <figure class="">
+      
+      <video src="../img/tps-tube-heating.mp4" autoplay muted loop playsinline preload="metadata" class="contain" poster="../img/tps-tube-heating-poster.jpg"></video>
+      
+      <figcaption>Gas temperature along the heated tube (0.70 mm bore) as a particle travels from inlet to outlet, at true aspect ratio.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">4</span><div><h3>150-case collection-efficiency sweep</h3><span class="step-date">Nov 2026</span></div></div>
+    <p class="step-text">Particle diameters of 5–200 nm, flow rates of 0.1–1.0 L/min, and tube-wall temperatures of 150–350 °C. Efficiency peaks at low flow (about 17% at 0.1 L/min) and rises with wall temperature (350 °C beat 300 °C in 28 of 30 matched cases). Higher flow delivers more particles per minute, but the gain levels off for 5–10 nm particles.
+</p>
+    <div class="sgallery c2">
+    <figure class="">
+      
+      
+      <a href="../img/tps-efficiency-by-size.jpg" target="_blank" rel="noopener"><img src="../img/tps-efficiency-by-size.jpg" alt="Collection efficiency against inlet flow rate for 5–200 nm particles at 150–350 °C." loading="lazy" class="contain"></a>
+      
+      <figcaption>Collection efficiency against inlet flow rate for 5–200 nm particles at 150–350 °C.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/tps-collection-flow-by-size.jpg" target="_blank" rel="noopener"><img src="../img/tps-collection-flow-by-size.jpg" alt="Effective collection flow (inlet flow × efficiency) by particle size." loading="lazy" class="contain"></a>
+      
+      <figcaption>Effective collection flow (inlet flow × efficiency) by particle size.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+</section>
+
+<section class="wrap block phase">
+  <div class="block-head"><h2>Phase 2 · Experiments</h2></div>
+  <p class="phase-intro">Bench tests of the real sampler against a known aerosol, and hardware changes to reach the operating conditions the model recommends. Shown in chronological order.
+</p>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">1</span><div><h3>Spark-discharge tests</h3><span class="step-date">Oct 2026</span></div></div>
+    <p class="step-text">A Palas GFG 1000 spark-discharge generator made the aerosol, an SMPS measured the reference size distribution (about 1.1 × 10⁷ particles/cm³, geometric mean 24.5 nm), and the sampler collected particles onto TEM grids using its own timer-controlled box.
+</p>
+    <div class="sgallery c2">
+    <figure class="">
+      
+      
+      <a href="../img/tps-setup.jpg" target="_blank" rel="noopener"><img src="../img/tps-setup.jpg" alt="Test setup: spark-discharge generator, SMPS, and the sampler with its control box." loading="lazy"></a>
+      
+      <figcaption>Test setup: spark-discharge generator, SMPS, and the sampler with its control box.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/tps-smps.jpg" target="_blank" rel="noopener"><img src="../img/tps-smps.jpg" alt="SMPS size distribution of the generated aerosol, used as the reference." loading="lazy"></a>
+      
+      <figcaption>SMPS size distribution of the generated aerosol, used as the reference.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/tps-controller.jpg" target="_blank" rel="noopener"><img src="../img/tps-controller.jpg" alt="The sampler&#39;s control box on the bench supply." loading="lazy"></a>
+      
+      <figcaption>The sampler&#39;s control box on the bench supply.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/tps-controller-panel.jpg" target="_blank" rel="noopener"><img src="../img/tps-controller-panel.jpg" alt="Front panel with an OLED sampling timer and push-button controls." loading="lazy"></a>
+      
+      <figcaption>Front panel with an OLED sampling timer and push-button controls.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">2</span><div><h3>First TEM grids</h3><span class="step-date">Oct 2026</span></div></div>
+    <p class="step-text">10- and 20-minute samples collected plenty of aggregates on lacey carbon grids, but the deposit is not uniform, so grid counts alone can&#39;t give a reliable efficiency. The next tests will measure SMPS concentrations at both the inlet and the exhaust.
+</p>
+    <div class="sgallery c2">
+    <figure class="">
+      
+      
+      <a href="../img/tps-tem-1.jpg" target="_blank" rel="noopener"><img src="../img/tps-tem-1.jpg" alt="Spark-generated aggregates collected on a lacey carbon grid." loading="lazy"></a>
+      
+      <figcaption>Spark-generated aggregates collected on a lacey carbon grid.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/tps-tem-2.jpg" target="_blank" rel="noopener"><img src="../img/tps-tem-2.jpg" alt="Another region of the same grid." loading="lazy"></a>
+      
+      <figcaption>Another region of the same grid.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">3</span><div><h3>New heater wire</h3><span class="step-date">Nov 2026</span></div></div>
+    <p class="step-text">The simulations favour a hotter tube wall, so I bench-tested a new heating-wire length to see how hot it can run. The coil reached 321 °C, approaching the 350 °C target.
+</p>
+    <div class="sgallery c3">
+    <figure class="">
+      
+      
+      <a href="../img/tps-heater-coil.jpg" target="_blank" rel="noopener"><img src="../img/tps-heater-coil.jpg" alt="The new heating-wire coil on test leads." loading="lazy" class="tall"></a>
+      
+      <figcaption>The new heating-wire coil on test leads.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/tps-heater-supply.jpg" target="_blank" rel="noopener"><img src="../img/tps-heater-supply.jpg" alt="Powered from a DC bench supply." loading="lazy" class="tall"></a>
+      
+      <figcaption>Powered from a DC bench supply.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/tps-heater-321c.jpg" target="_blank" rel="noopener"><img src="../img/tps-heater-321c.jpg" alt="Thermocouple reading of 321 °C on the heater controller." loading="lazy" class="tall"></a>
+      
+      <figcaption>Thermocouple reading of 321 °C on the heater controller.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+</section>
+
+
+
+<section class="wrap block">
+  <div class="rows">
     
-    <div class="row">
-      <h3>Next steps</h3>
-      <div>
-        
-        <ul><li>Compare the simulated collection efficiency with SMPS inlet/outlet measurements</li><li>Add grid warming and seed-to-seed error bars to the simulations</li><li>Vary flow rate, heater temperature, and jet-to-grid spacing in both model and experiment</li><li>Design and prototype a multi-grid package for UAV sampling</li></ul>
-      </div>
-    </div>
+    <div class="row"><h3>Next steps</h3><div><ul><li>Compare the simulated collection efficiency with SMPS inlet/outlet measurements</li><li>Add grid warming and seed-to-seed error bars to the simulations</li><li>Settle the heater design and operating point (target 350 °C tube wall at 0.3 L/min)</li><li>Design and prototype a multi-grid package for UAV sampling</li></ul></div></div>
     
   </div>
 </section>
+
+
 
 <section class="wrap block pager">
   <a href="carbosamy.html"><span class="label">Previous</span>CarboSAMY</a>
