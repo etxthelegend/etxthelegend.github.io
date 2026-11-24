@@ -130,35 +130,71 @@ projects:
         body: >
           Transmission electron microscopy (TEM) is the standard way to see the structure of soot
           aggregates, but measuring them means hand-tracing particles image by image. That slow,
-          subjective step limits how much data a study can use.
-      - heading: What I built
-        body: >
-          CarboSAMY is an end-to-end workflow that detects particles, segments them, and extracts
-          morphology metrics automatically. It uses two models: CarboSAM-seg for segmentation and
-          CarboSAM-pp for post-processing. Compared with manual analysis it cuts analysis time by
-          99.6%.
-      - heading: Validation
-        body: >
-          I coordinated a small annotation team producing manually segmented images as validation
-          data, reviewing consistency, particle identification, and mask quality.
-      - heading: Status
-        body: >
-          Manuscript under review at Powder Technology. Results were presented as a poster at the
-          Canadian Aerosol Conference (Ottawa, July 2026), and the CarboSAMY poster won second place in the
-          Undergraduate Research and Design Expo student poster competition at ASME IMECE 2026 in
-          Vancouver.
-    images:
-      - { src: img/carbosamy-workflow.jpg, fit: contain, caption: "Inference workflow. YOLO finds and classifies particles, and its boxes prompt CarboSAM to produce masks at (a) the aggregate level and (b) the primary-particle level." }
-      - { src: img/carbosamy-imece-poster.jpg, fit: contain, caption: "The CarboSAMY poster presented at ASME IMECE 2026 (second place, Undergraduate Research and Design Expo)." }
-      - { src: img/imece-poster-presentation.jpg, caption: "Presenting the CarboSAMY poster at the ASME IMECE 2026 Undergraduate Research and Design Expo, Vancouver." }
-      - { src: img/imece-award.jpg, caption: "Receiving second place in the IMECE 2026 student poster competition." }
-      - { src: img/imece-award-certificate.jpg, fit: contain, caption: "ASME IMECE 2026 award certificate: second place, Undergraduate Research and Design Expo student poster competition." }
-      - { src: img/carbosamy-tem-soot.jpg, caption: "A soot aggregate imaged by transmission electron microscopy." }
-      - { src: img/carbosamy-primary-particles.jpg, caption: "CarboSAMY-pp detecting individual primary particles inside aggregates." }
-      - { src: img/carbosamy-architecture.jpg, fit: contain, caption: "Architecture: a µSAM model fine-tuned on TEM masks (top), prompted by a YOLO detector (bottom)." }
-      - { src: img/carbosamy-segmentation-comparison.jpg, fit: contain, caption: "Segmentation of wildfire, laboratory, and lacey-grid soot: CarboSAMY compared with Carboseg and k-means." }
-      - { src: img/carbosamy-parity.jpg, fit: contain, caption: "Aggregate diameter against manual measurement: CarboSAMY tracks the 1:1 line with under 1% bias." }
-      - { src: img/carbosamy-pp-comparison.jpg, fit: contain, caption: "Primary-particle detections from manual analysis, CHT, SAGE, and CarboSAMY-pp on the same images." }
+          subjective step limits how much data a study can use. CarboSAMY automates it end to end
+          and cuts analysis time by 99.6%.
+    phases:
+      - title: "The model"
+        text: >
+          How CarboSAMY turns a raw TEM image into measured particles.
+        steps:
+          - title: Architecture
+            text: >
+              A µSAM segmentation model fine-tuned on TEM images and their hand-traced masks, prompted
+              by a YOLO detector that finds and classifies each particle.
+            images:
+              - { src: img/carbosamy-architecture.jpg, fit: contain, caption: "Architecture: a µSAM model fine-tuned on TEM masks (top), prompted by a YOLO detector (bottom)." }
+          - title: Inference workflow
+            text: >
+              The same workflow runs at two levels: CarboSAMY-agg segments whole aggregates, and
+              CarboSAMY-pp extracts and sizes the primary particles inside them.
+            images:
+              - { src: img/carbosamy-workflow.jpg, fit: contain, caption: "YOLO finds and classifies particles, and its boxes prompt CarboSAM to produce masks at (a) the aggregate level and (b) the primary-particle level." }
+          - title: Input and output
+            images:
+              - { src: img/carbosamy-tem-soot.jpg, caption: "Input: a soot aggregate imaged by TEM." }
+              - { src: img/carbosamy-primary-particles.jpg, caption: "Output: CarboSAMY-pp outlining individual primary particles inside aggregates." }
+      - title: "Validation and results"
+        text: >
+          I coordinated a small annotation team that hand-segmented images as ground truth,
+          reviewing consistency, particle identification, and mask quality. CarboSAMY was then
+          compared with manual analysis and existing methods.
+        steps:
+          - title: Aggregate segmentation
+            text: >
+              Mean IoU of 93% on typical soot, matching the Carboseg benchmark and well above
+              k-means, and 89% on difficult lacey-carbon grids. Aggregate diameters track manual
+              measurements with under 1% bias.
+            images:
+              - { src: img/carbosamy-segmentation-comparison.jpg, fit: contain, caption: "Wildfire, laboratory, and lacey-grid soot: CarboSAMY compared with Carboseg and k-means." }
+              - { src: img/carbosamy-parity.jpg, fit: contain, caption: "Aggregate diameter against manual measurement, close to the 1:1 line." }
+          - title: Primary-particle sizing
+            text: >
+              Primary-particle size bias against manual analysis of +11%, compared with +40% for the
+              circular Hough transform (CHT) and +57% for SAGE.
+            images:
+              - { src: img/carbosamy-pp-comparison.jpg, fit: contain, caption: "Primary-particle detections from manual analysis, CHT, SAGE, and CarboSAMY-pp on the same images." }
+      - title: "Conferences and publication"
+        text: >
+          Where the work has been presented, in chronological order.
+        steps:
+          - date: Jul 2026
+            title: Canadian Aerosol Conference, Ottawa
+            text: >
+              First poster on the TEM image-analysis techniques behind CarboSAMY.
+          - date: Oct 2026
+            title: Manuscript submitted
+            text: >
+              First-author manuscript submitted to Powder Technology; now under review.
+          - date: Nov 2026
+            title: "ASME IMECE 2026, Vancouver: second place"
+            text: >
+              The CarboSAMY poster won second place in the Undergraduate Research and Design Expo
+              student poster competition.
+            images:
+              - { src: img/carbosamy-imece-poster.jpg, fit: contain, caption: "The CarboSAMY poster presented at IMECE 2026." }
+              - { src: img/imece-poster-presentation.jpg, caption: "Presenting the poster at the Undergraduate Research and Design Expo." }
+              - { src: img/imece-award.jpg, caption: "Receiving second place." }
+              - { src: img/imece-award-certificate.jpg, fit: contain, caption: "Award certificate: second place, student poster competition." }
 
   - slug: thermophoretic-sampler
     title: Thermophoretic Sampler

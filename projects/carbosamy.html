@@ -48,100 +48,6 @@
 </section>
 
 
-<section class="wrap">
-  <div class="gallery n4">
-    
-    <figure class="lead">
-      
-      
-      <a href="../img/carbosamy-workflow.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-workflow.jpg" alt="Inference workflow. YOLO finds and classifies particles, and its boxes prompt CarboSAM to produce masks at (a) the aggregate level and (b) the primary-particle level." loading="lazy" class="contain"></a>
-      
-      <figcaption>Inference workflow. YOLO finds and classifies particles, and its boxes prompt CarboSAM to produce masks at (a) the aggregate level and (b) the primary-particle level.</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      
-      <a href="../img/carbosamy-imece-poster.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-imece-poster.jpg" alt="The CarboSAMY poster presented at ASME IMECE 2026 (second place, Undergraduate Research and Design Expo)." loading="lazy" class="contain"></a>
-      
-      <figcaption>The CarboSAMY poster presented at ASME IMECE 2026 (second place, Undergraduate Research and Design Expo).</figcaption>
-    </figure>
-    
-    <figure class="">
-      
-      
-      <a href="../img/imece-poster-presentation.jpg" target="_blank" rel="noopener"><img src="../img/imece-poster-presentation.jpg" alt="Presenting the CarboSAMY poster at the ASME IMECE 2026 Undergraduate Research and Design Expo, Vancouver." loading="lazy"></a>
-      
-      <figcaption>Presenting the CarboSAMY poster at the ASME IMECE 2026 Undergraduate Research and Design Expo, Vancouver.</figcaption>
-    </figure>
-    
-    <figure class="">
-      
-      
-      <a href="../img/imece-award.jpg" target="_blank" rel="noopener"><img src="../img/imece-award.jpg" alt="Receiving second place in the IMECE 2026 student poster competition." loading="lazy"></a>
-      
-      <figcaption>Receiving second place in the IMECE 2026 student poster competition.</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      
-      <a href="../img/imece-award-certificate.jpg" target="_blank" rel="noopener"><img src="../img/imece-award-certificate.jpg" alt="ASME IMECE 2026 award certificate: second place, Undergraduate Research and Design Expo student poster competition." loading="lazy" class="contain"></a>
-      
-      <figcaption>ASME IMECE 2026 award certificate: second place, Undergraduate Research and Design Expo student poster competition.</figcaption>
-    </figure>
-    
-    <figure class="">
-      
-      
-      <a href="../img/carbosamy-tem-soot.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-tem-soot.jpg" alt="A soot aggregate imaged by transmission electron microscopy." loading="lazy"></a>
-      
-      <figcaption>A soot aggregate imaged by transmission electron microscopy.</figcaption>
-    </figure>
-    
-    <figure class="">
-      
-      
-      <a href="../img/carbosamy-primary-particles.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-primary-particles.jpg" alt="CarboSAMY-pp detecting individual primary particles inside aggregates." loading="lazy"></a>
-      
-      <figcaption>CarboSAMY-pp detecting individual primary particles inside aggregates.</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      
-      <a href="../img/carbosamy-architecture.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-architecture.jpg" alt="Architecture: a µSAM model fine-tuned on TEM masks (top), prompted by a YOLO detector (bottom)." loading="lazy" class="contain"></a>
-      
-      <figcaption>Architecture: a µSAM model fine-tuned on TEM masks (top), prompted by a YOLO detector (bottom).</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      
-      <a href="../img/carbosamy-segmentation-comparison.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-segmentation-comparison.jpg" alt="Segmentation of wildfire, laboratory, and lacey-grid soot: CarboSAMY compared with Carboseg and k-means." loading="lazy" class="contain"></a>
-      
-      <figcaption>Segmentation of wildfire, laboratory, and lacey-grid soot: CarboSAMY compared with Carboseg and k-means.</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      
-      <a href="../img/carbosamy-parity.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-parity.jpg" alt="Aggregate diameter against manual measurement: CarboSAMY tracks the 1:1 line with under 1% bias." loading="lazy" class="contain"></a>
-      
-      <figcaption>Aggregate diameter against manual measurement: CarboSAMY tracks the 1:1 line with under 1% bias.</figcaption>
-    </figure>
-    
-    <figure class="wide">
-      
-      
-      <a href="../img/carbosamy-pp-comparison.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-pp-comparison.jpg" alt="Primary-particle detections from manual analysis, CHT, SAGE, and CarboSAMY-pp on the same images." loading="lazy" class="contain"></a>
-      
-      <figcaption>Primary-particle detections from manual analysis, CHT, SAGE, and CarboSAMY-pp on the same images.</figcaption>
-    </figure>
-    
-  </div>
-</section>
-
 
 <section class="wrap block">
   <p class="summary">A deep-learning workflow that finds, segments, and measures soot and other carbonaceous particles in electron-microscope images, reducing analysis time by 99.6%.
@@ -151,34 +57,7 @@
     <div class="row">
       <h3>Why</h3>
       <div>
-        <p>Transmission electron microscopy (TEM) is the standard way to see the structure of soot aggregates, but measuring them means hand-tracing particles image by image. That slow, subjective step limits how much data a study can use.
-</p>
-        
-      </div>
-    </div>
-    
-    <div class="row">
-      <h3>What I built</h3>
-      <div>
-        <p>CarboSAMY is an end-to-end workflow that detects particles, segments them, and extracts morphology metrics automatically. It uses two models: CarboSAM-seg for segmentation and CarboSAM-pp for post-processing. Compared with manual analysis it cuts analysis time by 99.6%.
-</p>
-        
-      </div>
-    </div>
-    
-    <div class="row">
-      <h3>Validation</h3>
-      <div>
-        <p>I coordinated a small annotation team producing manually segmented images as validation data, reviewing consistency, particle identification, and mask quality.
-</p>
-        
-      </div>
-    </div>
-    
-    <div class="row">
-      <h3>Status</h3>
-      <div>
-        <p>Manuscript under review at Powder Technology. Results were presented as a poster at the Canadian Aerosol Conference (Ottawa, July 2026), and the CarboSAMY poster won second place in the Undergraduate Research and Design Expo student poster competition at ASME IMECE 2026 in Vancouver.
+        <p>Transmission electron microscopy (TEM) is the standard way to see the structure of soot aggregates, but measuring them means hand-tracing particles image by image. That slow, subjective step limits how much data a study can use. CarboSAMY automates it end to end and cuts analysis time by 99.6%.
 </p>
         
       </div>
@@ -186,6 +65,174 @@
     
   </div>
 </section>
+
+
+
+
+<section class="wrap block phase">
+  <div class="block-head"><h2>The model</h2></div>
+  <p class="phase-intro">How CarboSAMY turns a raw TEM image into measured particles.
+</p>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">1</span><div><h3>Architecture</h3></div></div>
+    <p class="step-text">A µSAM segmentation model fine-tuned on TEM images and their hand-traced masks, prompted by a YOLO detector that finds and classifies each particle.
+</p>
+    <div class="sgallery c1">
+    <figure class="">
+      
+      
+      <a href="../img/carbosamy-architecture.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-architecture.jpg" alt="Architecture: a µSAM model fine-tuned on TEM masks (top), prompted by a YOLO detector (bottom)." loading="lazy" class="contain"></a>
+      
+      <figcaption>Architecture: a µSAM model fine-tuned on TEM masks (top), prompted by a YOLO detector (bottom).</figcaption>
+    </figure>
+</div>
+  </div>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">2</span><div><h3>Inference workflow</h3></div></div>
+    <p class="step-text">The same workflow runs at two levels: CarboSAMY-agg segments whole aggregates, and CarboSAMY-pp extracts and sizes the primary particles inside them.
+</p>
+    <div class="sgallery c1">
+    <figure class="">
+      
+      
+      <a href="../img/carbosamy-workflow.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-workflow.jpg" alt="YOLO finds and classifies particles, and its boxes prompt CarboSAM to produce masks at (a) the aggregate level and (b) the primary-particle level." loading="lazy" class="contain"></a>
+      
+      <figcaption>YOLO finds and classifies particles, and its boxes prompt CarboSAM to produce masks at (a) the aggregate level and (b) the primary-particle level.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">3</span><div><h3>Input and output</h3></div></div>
+    
+    <div class="sgallery c2">
+    <figure class="">
+      
+      
+      <a href="../img/carbosamy-tem-soot.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-tem-soot.jpg" alt="Input: a soot aggregate imaged by TEM." loading="lazy"></a>
+      
+      <figcaption>Input: a soot aggregate imaged by TEM.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/carbosamy-primary-particles.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-primary-particles.jpg" alt="Output: CarboSAMY-pp outlining individual primary particles inside aggregates." loading="lazy"></a>
+      
+      <figcaption>Output: CarboSAMY-pp outlining individual primary particles inside aggregates.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+</section>
+
+<section class="wrap block phase">
+  <div class="block-head"><h2>Validation and results</h2></div>
+  <p class="phase-intro">I coordinated a small annotation team that hand-segmented images as ground truth, reviewing consistency, particle identification, and mask quality. CarboSAMY was then compared with manual analysis and existing methods.
+</p>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">1</span><div><h3>Aggregate segmentation</h3></div></div>
+    <p class="step-text">Mean IoU of 93% on typical soot, matching the Carboseg benchmark and well above k-means, and 89% on difficult lacey-carbon grids. Aggregate diameters track manual measurements with under 1% bias.
+</p>
+    <div class="sgallery c2">
+    <figure class="">
+      
+      
+      <a href="../img/carbosamy-segmentation-comparison.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-segmentation-comparison.jpg" alt="Wildfire, laboratory, and lacey-grid soot: CarboSAMY compared with Carboseg and k-means." loading="lazy" class="contain"></a>
+      
+      <figcaption>Wildfire, laboratory, and lacey-grid soot: CarboSAMY compared with Carboseg and k-means.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/carbosamy-parity.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-parity.jpg" alt="Aggregate diameter against manual measurement, close to the 1:1 line." loading="lazy" class="contain"></a>
+      
+      <figcaption>Aggregate diameter against manual measurement, close to the 1:1 line.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">2</span><div><h3>Primary-particle sizing</h3></div></div>
+    <p class="step-text">Primary-particle size bias against manual analysis of +11%, compared with +40% for the circular Hough transform (CHT) and +57% for SAGE.
+</p>
+    <div class="sgallery c1">
+    <figure class="">
+      
+      
+      <a href="../img/carbosamy-pp-comparison.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-pp-comparison.jpg" alt="Primary-particle detections from manual analysis, CHT, SAGE, and CarboSAMY-pp on the same images." loading="lazy" class="contain"></a>
+      
+      <figcaption>Primary-particle detections from manual analysis, CHT, SAGE, and CarboSAMY-pp on the same images.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+</section>
+
+<section class="wrap block phase">
+  <div class="block-head"><h2>Conferences and publication</h2></div>
+  <p class="phase-intro">Where the work has been presented, in chronological order.
+</p>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">1</span><div><h3>Canadian Aerosol Conference, Ottawa</h3><span class="step-date">Jul 2026</span></div></div>
+    <p class="step-text">First poster on the TEM image-analysis techniques behind CarboSAMY.
+</p>
+    
+  </div>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">2</span><div><h3>Manuscript submitted</h3><span class="step-date">Oct 2026</span></div></div>
+    <p class="step-text">First-author manuscript submitted to Powder Technology; now under review.
+</p>
+    
+  </div>
+  
+  <div class="step">
+    <div class="step-head"><span class="step-n">3</span><div><h3>ASME IMECE 2026, Vancouver: second place</h3><span class="step-date">Nov 2026</span></div></div>
+    <p class="step-text">The CarboSAMY poster won second place in the Undergraduate Research and Design Expo student poster competition.
+</p>
+    <div class="sgallery c2">
+    <figure class="">
+      
+      
+      <a href="../img/carbosamy-imece-poster.jpg" target="_blank" rel="noopener"><img src="../img/carbosamy-imece-poster.jpg" alt="The CarboSAMY poster presented at IMECE 2026." loading="lazy" class="contain"></a>
+      
+      <figcaption>The CarboSAMY poster presented at IMECE 2026.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/imece-poster-presentation.jpg" target="_blank" rel="noopener"><img src="../img/imece-poster-presentation.jpg" alt="Presenting the poster at the Undergraduate Research and Design Expo." loading="lazy"></a>
+      
+      <figcaption>Presenting the poster at the Undergraduate Research and Design Expo.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/imece-award.jpg" target="_blank" rel="noopener"><img src="../img/imece-award.jpg" alt="Receiving second place." loading="lazy"></a>
+      
+      <figcaption>Receiving second place.</figcaption>
+    </figure>
+
+    <figure class="">
+      
+      
+      <a href="../img/imece-award-certificate.jpg" target="_blank" rel="noopener"><img src="../img/imece-award-certificate.jpg" alt="Award certificate: second place, student poster competition." loading="lazy" class="contain"></a>
+      
+      <figcaption>Award certificate: second place, student poster competition.</figcaption>
+    </figure>
+</div>
+  </div>
+  
+</section>
+
 
 
 
